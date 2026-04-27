@@ -1,6 +1,12 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/actionman_game.dir/main.cpp.o"
-  "CMakeFiles/actionman_game.dir/main.cpp.o.d"
+  "CMakeFiles/actionman_game.dir/src/Game.cpp.o"
+  "CMakeFiles/actionman_game.dir/src/Game.cpp.o.d"
+  "CMakeFiles/actionman_game.dir/src/InputManager.cpp.o"
+  "CMakeFiles/actionman_game.dir/src/InputManager.cpp.o.d"
+  "CMakeFiles/actionman_game.dir/src/Player.cpp.o"
+  "CMakeFiles/actionman_game.dir/src/Player.cpp.o.d"
+  "CMakeFiles/actionman_game.dir/src/main.cpp.o"
+  "CMakeFiles/actionman_game.dir/src/main.cpp.o.d"
   "actionman_game"
   "actionman_game.pdb"
 )

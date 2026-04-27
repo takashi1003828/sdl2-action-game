@@ -5,14 +5,25 @@ project(actionman_game)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# ヘッダーファイルの検索パス
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+
 # homebrewのパスを検索対象に追加
 list(APPEND CMAKE_PREFIX_PATH "/opt/homebrew")
 
 # SDL2ライブラリを検索
 find_package(SDL2 REQUIRED)
 
+#コンパイルするソースファイルを指定
+set(SOURCES
+    src/main.cpp
+    src/InputManager.cpp
+    src/Game.cpp
+    src/Player.cpp
+)
+
 # 実行ファイルを作成
-add_executable(actionman_game main.cpp)
+add_executable(actionman_game ${SOURCES})
 
 # ヘッダーファイルの場所を指定
 target_include_directories(actionman_game PRIVATE ${SDL2_INCLUDE_DIRS})
