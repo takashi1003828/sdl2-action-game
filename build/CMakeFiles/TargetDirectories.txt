@@ -1,0 +1,3 @@
+/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles/actionman_game.dir
+/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles/edit_cache.dir
+/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles/rebuild_cache.dir

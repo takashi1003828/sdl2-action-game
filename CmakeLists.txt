@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.10)
+project(actionman_game)
+
+#C++ 17を使用
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# homebrewのパスを検索対象に追加
+list(APPEND CMAKE_PREFIX_PATH "/opt/homebrew")
+
+# SDL2ライブラリを検索
+find_package(SDL2 REQUIRED)
+
+# 実行ファイルを作成
+add_executable(actionman_game main.cpp)
+
+# ヘッダーファイルの場所を指定
+target_include_directories(actionman_game PRIVATE ${SDL2_INCLUDE_DIRS})
+
+# ライブラリ本体の場所とライブラリ名を指定
+target_link_libraries(actionman_game PRIVATE ${SDL2_LIBRARIES})
