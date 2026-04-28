@@ -2,6 +2,7 @@
 #include "Entities/Player.h"
 #include "Core/Constants.h"
 #include "Core/InputManager.h"
+#include "Physics/Collider.h"
 
 using namespace Constants;
 
@@ -21,7 +22,7 @@ Player::Player() {
 //  プレイヤーの終了処理（デスコンストラクタ）
 Player::~Player() {}
 
-void Player::Update(float dt) {
+void Player::Update(float dt, const std::vector<SDL_Rect>& colliders) {
     auto& input = InputManager::GetInstance();
 
     // 1. ジャンプ判定
@@ -65,18 +66,61 @@ void Player::Update(float dt) {
     velocityY += currentGravity * dt;
     if (velocityY > MAX_FALL_SPEED) velocityY = MAX_FALL_SPEED;
 
-    // 6. 座標の更新
-    x += velocityX * dt;
-    y += velocityY * dt;
+ 
 
-    // 7. 地面との当たり判定
-    if (y + height >= GROUND_Y) {
-        y = GROUND_Y - height;
-        velocityY = 0.0f;
-        isGrounded = true;
-    } else {
-        isGrounded = false;
+    // プレイヤーの未来の当たり判定枠を用意する
+    SDL_Rect playerRect = { (int)x, (int)y, width, height };
+    //
+    //x軸の移動と当たり判定
+    //
+    x += velocityX * dt;
+    playerRect.x = (int)x; //移動後のX座標を枠に反映
+    for(const auto& collider : colliders){
+        if(Physics::CheckCollision(playerRect, collider)){
+            if (velocityX > 0){
+                x = collider.x - width; //右側の壁にぶつかった場合、プレイヤーの右端を壁の左端に合わせる
+            } else if (velocityX < 0){
+                x = collider.x + collider.w; //左側の壁にぶつかった場合、プレイヤーの左端を壁の右端に合わせる
+            }
+            //ぶつかった場合のめり込み解消処理
+            velocityX = 0.0f;
+            playerRect.x = (int)x; //位置修正後のX座標を枠に反映
+        }
     }
+
+    //
+    //y軸の移動と当たり判定
+    //
+    y += velocityY * dt;
+    playerRect.y = (int)y; //移動後のY座標を枠に反映
+    isGrounded = false; //地面にいるかのフラグをリセット
+    for(const auto& collider : colliders){
+        if(Physics::CheckCollision(playerRect, collider)){
+            if (velocityY > 0){
+                y = collider.y - height; //地面に落ちる場合、プレイヤーの下端を地面の上端に合わせる
+                isGrounded = true; //地面にいるフラグを立てる
+            } else if (velocityY < 0){
+                y = collider.y + collider.h; //天井にぶつかる場合、プレイヤーの上端を天井の下端に合わせる
+            }
+            //ぶつかった場合のめり込み解消処理
+            velocityY = 0.0f;
+            playerRect.y = (int)y; //位置修正後のY座標を枠に反映
+        }
+    }
+    // --- 確実な着地判定（Raycast方式） ---
+    // Y軸の判定が終わった後、足元1ピクセル下を調べて確実に床があるかをチェックします。
+    // 小数点の切り捨てによる「ジャンプ不発」や「ガタつき」を防ぐ堅牢な手法です。
+    isGrounded = false;
+    if (velocityY >= 0.0f) {
+        SDL_Rect groundCheck = { (int)x, (int)y + 1, width, height };
+        for(const auto& collider : colliders){
+            if(Physics::CheckCollision(groundCheck, collider)){
+                isGrounded = true;
+                break;
+            }
+        }
+    }
+
 }
 
 void Player::Render(SDL_Renderer* renderer) {

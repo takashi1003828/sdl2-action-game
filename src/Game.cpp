@@ -3,10 +3,11 @@
 #include "Core/Constants.h"
 #include "Core/InputManager.h"
 #include <iostream>
+#include "Physics/Collider.h"
 
 using namespace Constants;
 
-// --- 第4回でスッキリしたコンストラクタ ---
+// コンストラクタとデストラクタ
 Game::Game() : window(nullptr), renderer(nullptr), isRunning(false), previousTime(0) {}
 
 Game::~Game() {}
@@ -30,6 +31,11 @@ bool Game::Initialize(const char* title, int width, int height) {
         std::cerr << "レンダラー作成失敗: " << SDL_GetError() << std::endl;
         return false;
     }
+
+    colliders.push_back({0, 500, 800, 100}); //地面の当たり判定
+    //colliders.push_back({300, 350, 200, 20}); //足場の当たり判定
+    //colliders.push_back({600, 400, 50, 100}); //足場の当たり判定
+    //colliders.push_back({600, 400, 50, 100}); //右側の壁の当たり判定
 
     // ループの準備
     isRunning = true;
@@ -76,7 +82,7 @@ void Game::UpdateGame() {
     previousTime = frameStart;
 
     // Playerの更新処理
-    player.Update(dt);
+    player.Update(dt, colliders);
 
     // フレームレート制御
     Uint32 frameTime = SDL_GetTicks() - frameStart;
@@ -91,6 +97,11 @@ void Game::GenerateOutput() {
     SDL_SetRenderDrawColor(renderer, 30, 30, 40, 255);
     SDL_RenderClear(renderer);
 
+    // 地形の描画処理
+    SDL_SetRenderDrawColor(renderer, 100, 255, 100, 255); //地形の色(緑)
+    for (const auto& collider : colliders){
+        SDL_RenderFillRect(renderer, &collider);
+    }
     // Playerの描画処理
     player.Render(renderer);
 

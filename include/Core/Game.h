@@ -1,6 +1,7 @@
 // include/Core/Game.h
 #pragma once
 #include <SDL2/SDL.h>
+#include <vector>
 #include "Entities/Player.h"
 
 class Game {
@@ -27,4 +28,7 @@ private:
     Uint64 previousTime;
 
     Player player;
+
+    //ステージ上の当たり判定を持つブロックのリスト
+    std::vector<SDL_Rect> colliders;
 };
