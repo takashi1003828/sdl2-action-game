@@ -3,6 +3,8 @@
 #include <SDL2/SDL.h>
 #include <vector>
 
+class PlayerState; // 前方宣言（PlayerStateクラスの完全な定義はPlayer.cppで行います）
+
 class Player {
 public:
     Player();
@@ -14,8 +16,24 @@ public:
     // 描画を行う
     void Render(SDL_Renderer* renderer);
 
+    // --- ステートパターン用の追加 ---
+    // 状態を切り替える関数
+    void ChangeState(PlayerState* newState);
+
+    // 状態クラスからプレイヤーの変数を操作するためのゲッター/セッター
+    float GetX() const { return x; }
+    float GetY() const { return y; }
+    void SetVelocityX(float vx) { velocityX = vx; }
+    void SetVelocityY(float vy) { velocityY = vy; }
+
+    bool IsGrounded() const { return isGrounded; }
+    bool IsMovingX() const { return isMovingX; }
+    bool IsJumpPressed() const { return isJumpPressed; }
+    // 必要に応じて追加...
 private:
     // プレイヤーの状態データ
+    PlayerState* currentState; // 現在の状態を指すポインタ
+
     float x;
     float y;
     float velocityX;

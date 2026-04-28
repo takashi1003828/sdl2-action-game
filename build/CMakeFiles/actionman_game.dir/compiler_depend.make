@@ -2522,6 +2522,7 @@ CMakeFiles/actionman_game.dir/src/Player.cpp.o: /Volumes/Samsung_T7/ゲーム
   /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Core/Constants.h \
   /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Core/InputManager.h \
   /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Entities/Player.h \
+  /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Entities/States/PlayerState.h \
   /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Physics/Collider.h \
   /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL.h \
   /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_assert.h \
@@ -3418,6 +3419,8 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
   /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/begin_code.h \
   /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/close_code.h
 
+
+/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Entities/States/PlayerState.h:
 
 /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/begin_code.h:
 

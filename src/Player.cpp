@@ -1,5 +1,6 @@
 // src/Player.cpp
 #include "Entities/Player.h"
+#include "Entities/States/PlayerState.h"
 #include "Core/Constants.h"
 #include "Core/InputManager.h"
 #include "Physics/Collider.h"
@@ -121,6 +122,21 @@ void Player::Update(float dt, const std::vector<SDL_Rect>& colliders) {
         }
     }
 
+}
+void Player::ChangeState(PlayerState* newState) {
+    // 1. もし現在何かの状態に入っていれば、終わりの処理(Exit)を呼んでから消す
+    if (currentState != nullptr) {
+        currentState->Exit(this); // 古い状態の終了処理
+        delete currentState;      // 古い状態のメモリを解放！（重要）
+    }
+
+    // 2. 新しい状態をセットする
+    currentState = newState;
+
+    // 3. 新しい状態の始まりの処理(Enter)を呼ぶ
+    if (currentState != nullptr) {
+        currentState->Enter(this);
+    }
 }
 
 void Player::Render(SDL_Renderer* renderer) {
