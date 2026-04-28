@@ -6,8 +6,8 @@ namespace Physics {
     inline bool CheckCollision(const SDL_Rect& a,const SDL_Rect& b) {
         //AABBのアルゴリズム
         return (a.x < b.x + b.w &&
-                a.x + a.w + b.x &&
-                a.y < b.x + b.h &&
+                a.x + a.w > b.x &&
+                a.y < b.y + b.h &&
                 a.y + a.h > b.y);
     }
 }

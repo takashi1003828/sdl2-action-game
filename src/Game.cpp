@@ -33,9 +33,9 @@ bool Game::Initialize(const char* title, int width, int height) {
     }
 
     colliders.push_back({0, 500, 800, 100}); //地面の当たり判定
-    //colliders.push_back({300, 350, 200, 20}); //足場の当たり判定
-    //colliders.push_back({600, 400, 50, 100}); //足場の当たり判定
-    //colliders.push_back({600, 400, 50, 100}); //右側の壁の当たり判定
+    colliders.push_back({300, 350, 200, 20}); //足場の当たり判定
+    colliders.push_back({600, 400, 50, 100}); //足場の当たり判定
+    colliders.push_back({600, 400, 50, 100}); //右側の壁の当たり判定
 
     // ループの準備
     isRunning = true;
