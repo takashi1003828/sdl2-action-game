@@ -10,7 +10,7 @@ public:
     void Enter(Player* player) override;
 
     //マイフレームの更新処理
-    void Update(Player* player, float dt) override;
+    void Update(Player* player, float dt, const std::vector<SDL_Rect>& colliders) override;
 
     //状態から出る時の処理
     void Exit(Player* player) override;

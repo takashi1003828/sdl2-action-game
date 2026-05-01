@@ -1,9 +1,15 @@
 // src/Player.cpp
 #include "Entities/Player.h"
 #include "Entities/States/PlayerState.h"
+#include "Entities/States/IdleState.h"
+#include "Entities/States/WalkState.h"
+#include "Entities/States/JumpState.h"
+#include "Entities/States/DashState.h"
+#include "Entities/States/AirState.h"
 #include "Core/Constants.h"
 #include "Core/InputManager.h"
 #include "Physics/Collider.h"
+
 
 using namespace Constants;
 
@@ -18,63 +24,58 @@ Player::Player() {
     isGrounded = false;
     isMovingX = false;
     isJumpPressed = false;
+    currentState = new IdleState(); // 最初は待機状態からスタート
+    currentState->Enter(this); // 初期状態のEnter処理を呼び出す
 }
 
 //  プレイヤーの終了処理（デスコンストラクタ）
 Player::~Player() {}
 
+
 void Player::Update(float dt, const std::vector<SDL_Rect>& colliders) {
     auto& input = InputManager::GetInstance();
-
-    // 1. ジャンプ判定
-    isJumpPressed = input.IsKeyDown(SDL_SCANCODE_UP) || input.IsKeyDown(SDL_SCANCODE_W) || input.IsKeyDown(SDL_SCANCODE_SPACE);
-    if ((input.IsKeyPressed(SDL_SCANCODE_UP) || input.IsKeyPressed(SDL_SCANCODE_W) || input.IsKeyPressed(SDL_SCANCODE_SPACE)) && isGrounded) {
-        velocityY = JUMP_FORCE;
-        isGrounded = false;
-    }
-
-    // 2. 左右の移動と加速
-    float targetMaxSpeed = input.IsKeyDown(SDL_SCANCODE_LSHIFT) ? MAX_DASH_SPEED : MAX_WALK_SPEED;
-    isMovingX = false;
-    float currentAccel = isGrounded ? ACCEL_X : ACCEL_A_X;
     
-    if (input.IsKeyDown(SDL_SCANCODE_D) || input.IsKeyDown(SDL_SCANCODE_RIGHT)) {
-        velocityX += currentAccel * dt;
-        isMovingX = true;
-    }
-    if (input.IsKeyDown(SDL_SCANCODE_A) || input.IsKeyDown(SDL_SCANCODE_LEFT)) {
-        velocityX -= currentAccel * dt;
-        isMovingX = true;
-    }
 
-    // 3. 摩擦による減速
-    if (!isMovingX) {
-        if (velocityX > 0) {
-            velocityX -= FRICTION_X * dt;
-            if (velocityX < 0) velocityX = 0;
-        } else if (velocityX < 0) {
-            velocityX += FRICTION_X * dt;
-            if (velocityX > 0) velocityX = 0;
-        }
-    }
+    // ジャンプ判定
+    isJumpPressed = input.IsKeyDown(SDL_SCANCODE_UP) || input.IsKeyDown(SDL_SCANCODE_W) || input.IsKeyDown(SDL_SCANCODE_SPACE);
 
-    // 4. 速度の制限
+    //　ステート更新
+    if (currentState != nullptr) {
+        currentState->Update(this, dt, colliders);
+    } 
+
+    
+
+
+    // 摩擦による減速
+    Friction(dt);
+
+    printf("velocityX: %f\n", velocityX);
+    
+    // 速度の制限
     if (velocityX > targetMaxSpeed) velocityX = targetMaxSpeed;
     if (velocityX < -targetMaxSpeed) velocityX = -targetMaxSpeed;
 
-    // 5. 重力の計算
-    float currentGravity = (velocityY < 0.0f && !isJumpPressed) ? FALL_GRAVITY : GRAVITY;
-    velocityY += currentGravity * dt;
-    if (velocityY > MAX_FALL_SPEED) velocityY = MAX_FALL_SPEED;
-
- 
+    // 重力の計算
+    Gravity(dt);
 
     // プレイヤーの未来の当たり判定枠を用意する
-    SDL_Rect playerRect = { (int)x, (int)y, width, height };
-    //
+    playerRect = { (int)x, (int)y, width, height };
+
     //x軸の移動と当たり判定
-    //
-    x += velocityX * dt;
+    MoveX(dt, colliders);
+    
+
+    //y軸の移動と当たり判定
+    MoveY(dt, colliders);
+
+}
+
+
+
+
+void Player::MoveX(float dt, const std::vector<SDL_Rect>& colliders){
+     x += velocityX * dt;
     playerRect.x = (int)x; //移動後のX座標を枠に反映
     for(const auto& collider : colliders){
         if(Physics::CheckCollision(playerRect, collider)){
@@ -88,10 +89,9 @@ void Player::Update(float dt, const std::vector<SDL_Rect>& colliders) {
             playerRect.x = (int)x; //位置修正後のX座標を枠に反映
         }
     }
+}
 
-    //
-    //y軸の移動と当たり判定
-    //
+void Player::MoveY(float dt, const std::vector<SDL_Rect>& colliders){
     y += velocityY * dt;
     playerRect.y = (int)y; //移動後のY座標を枠に反映
     isGrounded = false; //地面にいるかのフラグをリセット
@@ -108,21 +108,46 @@ void Player::Update(float dt, const std::vector<SDL_Rect>& colliders) {
             playerRect.y = (int)y; //位置修正後のY座標を枠に反映
         }
     }
+}
+
+bool Player::Grounded(const std::vector<SDL_Rect>& colliders){
     // --- 確実な着地判定（Raycast方式） ---
-    // Y軸の判定が終わった後、足元1ピクセル下を調べて確実に床があるかをチェックします。
-    // 小数点の切り捨てによる「ジャンプ不発」や「ガタつき」を防ぐ堅牢な手法です。
+    // Y軸の判定が終わった後、足元1ピクセル下を調べて確実に床があるかをチェック
+    // 小数点の切り捨てによる「ジャンプ不発」や「ガタつき」を防ぐ堅牢な手法
     isGrounded = false;
     if (velocityY >= 0.0f) {
         SDL_Rect groundCheck = { (int)x, (int)y + 1, width, height };
         for(const auto& collider : colliders){
             if(Physics::CheckCollision(groundCheck, collider)){
-                isGrounded = true;
-                break;
+                return true; // 足元に地面あり
             }
+        }
+    }
+    return false; //足元に地面なし
+}
+
+void Player::Gravity(float dt) {
+    float currentGravity = (velocityY < 0.0f && !isJumpPressed) ? FALL_GRAVITY : GRAVITY;
+    velocityY += currentGravity * dt;
+    if (velocityY > MAX_FALL_SPEED) velocityY = MAX_FALL_SPEED;
+}
+
+void Player::Friction(float dt){
+    //移動キーが押されていないときに摩擦を適用して減速する
+        auto& input = InputManager::GetInstance();
+    if (!input.IsKeyDown(SDL_SCANCODE_D) && !input.IsKeyDown(SDL_SCANCODE_RIGHT) &&
+        !input.IsKeyDown(SDL_SCANCODE_A) && !input.IsKeyDown(SDL_SCANCODE_LEFT)) {
+        if (velocityX > 0) {
+            velocityX -= FRICTION_X * dt;
+            if (velocityX < 0) velocityX = 0;
+        } else if (velocityX < 0) {
+            velocityX += FRICTION_X * dt;
+            if (velocityX > 0) velocityX = 0;
         }
     }
 
 }
+
 void Player::ChangeState(PlayerState* newState) {
     // 1. もし現在何かの状態に入っていれば、終わりの処理(Exit)を呼んでから消す
     if (currentState != nullptr) {

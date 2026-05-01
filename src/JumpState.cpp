@@ -1,40 +1,42 @@
 #include "Entities/States/IdleState.h"
 #include "Entities/States/WalkState.h"
 #include "Entities/States/JumpState.h"
+#include "Entities/States/AirState.h"
+#include "Entities/States/DashState.h"
+#include "Core/InputManager.h"
 #include "Entities/Player.h"
 #include "Core/Constants.h"
 
+using namespace Constants;
+
 void JumpState::Enter(Player* player) {
-    // ジャンプ状態に入った瞬間、垂直方向の速度を設定する
-    player->SetVelocityY(-12.0f); // 仮で上向きの速度をセット
+    player->SetVelocityY(JUMP_FORCE);
 }
 
-void JumpState::Update(Player* player, float dt) {
-    // ジャンプ中の物理演算などをここに書きます
-}
-
-void JumpState::Exit(Player* player) {
-    // ジャンプ状態から抜けるときの処理
-}
-    
-    // （将来的に）待機アニメーションの再生指示などもここに書きます
-}
-
-void IdleState::Update(Player* player, float dt) {
-    // プレイヤーが左右の移動キーを押しているかチェック
-    if (player->IsMovingX()) {
-        // プレイヤーに対して「歩き状態」への変更を指示する！
-        player->ChangeState(new WalkState());
-        return; // 状態が変わったので、このフレームのUpdate処理はここで終了
+void JumpState::Update(Player* player, float dt, const std::vector<SDL_Rect>& colliders) {
+    auto& input = InputManager::GetInstance();
+    // 左右の加速、速度決定
+    player->targetMaxSpeed = MAX_WALK_SPEED;
+    if (input.IsKeyDown(SDL_SCANCODE_D) || input.IsKeyDown(SDL_SCANCODE_RIGHT)) {
+        player->SetVelocityX(player->GetVelocityX() + ACCEL_A_X * dt);
+    }
+    if (input.IsKeyDown(SDL_SCANCODE_A) || input.IsKeyDown(SDL_SCANCODE_LEFT)) {
+        player->SetVelocityX(player->GetVelocityX() - ACCEL_A_X * dt);
     }
     
-    // もしジャンプボタンが押されていて、かつ地面にいるなら
-    if (player->IsJumpPressed() && player->IsGrounded()) {
+    //もしジャンプキーが押されているかつ地面にいるなら
+    if (player->IsJumpPressed() && player->Grounded(colliders)) {
         player->ChangeState(new JumpState());
+        return;
+    }
+
+    // もしジャンプボタンが離されているかつ空中にいるなら
+    if (!player->IsJumpPressed() && !player->Grounded(colliders)) {
+        player->ChangeState(new AirState());
         return;
     }
 }
 
-void IdleState::Exit(Player* player) {
-    // 待機状態から抜けるときの処理（特になければ空でOKです）
+void JumpState::Exit(Player* player) {
+    // ジャンプ状態から抜けるときの処理
 }

@@ -3,8 +3,7 @@
 
 class Player;
 
-
-class JumpState : public PlayerState {
+class DashState : public PlayerState {
 public:
 
     //状態に入る時の処理
@@ -15,7 +14,6 @@ public:
 
     //状態から出る時の処理
     void Exit(Player* player) override;
-
 
 
 };

@@ -20,6 +20,11 @@ set(SOURCES
     src/InputManager.cpp
     src/Game.cpp
     src/Player.cpp
+    src/IdleState.cpp
+    src/WalkState.cpp
+    src/JumpState.cpp
+    src/DashState.cpp
+    src/AirState.cpp
 )
 
 # 実行ファイルを作成
