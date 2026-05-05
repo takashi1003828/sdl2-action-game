@@ -22,13 +22,13 @@ void IdleState::Update(Player* player, float dt, const std::vector<SDL_Rect>& co
     }
     
     // もしジャンプボタンが押されていて、かつ地面にいるなら
-    if (input.IsKeyDown(SDL_SCANCODE_SPACE) && player->Grounded(colliders)) {
+    if (player->IsJumpPressed() && player->Grounded(colliders)) {
         player->ChangeState(new JumpState());
         return;
     }
 
     //もしジャンプボタンが離されていて、かつ空中にいるなら
-    if (!input.IsKeyDown(SDL_SCANCODE_SPACE) && !player->Grounded(colliders)) {
+    if (!player->IsJumpPressed() && !player->Grounded(colliders)) {
         player->ChangeState(new AirState());
         return;
     }

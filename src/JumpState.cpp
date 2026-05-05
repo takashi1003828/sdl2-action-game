@@ -30,8 +30,8 @@ void JumpState::Update(Player* player, float dt, const std::vector<SDL_Rect>& co
         return;
     }
 
-    // もしジャンプボタンが離されているかつ空中にいるなら
-    if (!player->IsJumpPressed() && !player->Grounded(colliders)) {
+    // もしジャンプボタンが離されているかつ空中にいるまたは上への速度が0以下になったら
+    if ((!player->IsJumpPressed() && !player->Grounded(colliders)) || player->GetVelocityY() >= 0) {
         player->ChangeState(new AirState());
         return;
     }

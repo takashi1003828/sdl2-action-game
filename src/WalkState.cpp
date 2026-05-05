@@ -2,10 +2,10 @@
 #include "Entities/States/IdleState.h"
 #include "Entities/States/JumpState.h"
 #include "Entities/States/DashState.h"
+#include "Entities/States/AirState.h"
 #include "Core/Constants.h"
 #include "Entities/Player.h"
 #include "Core/InputManager.h"
-#include <iostream>
 
 using namespace Constants;
 
@@ -36,8 +36,8 @@ void WalkState::Update(Player* player, float dt, const std::vector<SDL_Rect>& co
     }
 
     // 歩き状態からダッシュ状態に遷移する条件
-    if ((input.IsKeyDown(SDL_SCANCODE_LSHIFT) && input.IsKeyDown(SDL_SCANCODE_D)) || (input.IsKeyDown(SDL_SCANCODE_RSHIFT) && input.IsKeyDown(SDL_SCANCODE_A)) ||
-        (input.IsKeyDown(SDL_SCANCODE_LSHIFT) && input.IsKeyDown(SDL_SCANCODE_RIGHT)) || (input.IsKeyDown(SDL_SCANCODE_RSHIFT) && input.IsKeyDown(SDL_SCANCODE_LEFT))) {
+    if ((input.IsKeyDown(SDL_SCANCODE_LSHIFT) && input.IsKeyDown(SDL_SCANCODE_D)) || (input.IsKeyDown(SDL_SCANCODE_LSHIFT) && input.IsKeyDown(SDL_SCANCODE_A)) ||
+        (input.IsKeyDown(SDL_SCANCODE_LSHIFT) && input.IsKeyDown(SDL_SCANCODE_RIGHT)) || (input.IsKeyDown(SDL_SCANCODE_LSHIFT) && input.IsKeyDown(SDL_SCANCODE_LEFT))) {
         // ダッシュキーが押されたので、ダッシュ状態へ
         player->ChangeState(new DashState());
         // player->ChangeState(new DashState()); // ダッシュ状態のクラスができたらこれを有効にする
@@ -46,9 +46,13 @@ void WalkState::Update(Player* player, float dt, const std::vector<SDL_Rect>& co
 
     // ジャンプ状態（Jump）へ遷移する条件
     // ジャンプキーが押された、または崖から落ちた（接地していない）場合
-    if (player->IsJumpPressed() || !player->Grounded(colliders)) {
+    if (player->IsJumpPressed()) {
         player->ChangeState(new JumpState());
         return;
+    }
+
+    if(!player->Grounded(colliders)){
+        player->ChangeState(new AirState());
     }
 }
 

@@ -9,6 +9,7 @@
 #include "Core/Constants.h"
 #include "Core/InputManager.h"
 #include "Physics/Collider.h"
+#include <iostream>
 
 
 using namespace Constants;
@@ -45,12 +46,12 @@ void Player::Update(float dt, const std::vector<SDL_Rect>& colliders) {
     } 
 
     
-
+    std::cout << typeid(*currentState).name() << std::endl;
 
     // 摩擦による減速
     Friction(dt);
 
-    printf("velocityX: %f\n", velocityX);
+    
     
     // 速度の制限
     if (velocityX > targetMaxSpeed) velocityX = targetMaxSpeed;
@@ -106,6 +107,17 @@ void Player::MoveY(float dt, const std::vector<SDL_Rect>& colliders){
             //ぶつかった場合のめり込み解消処理
             velocityY = 0.0f;
             playerRect.y = (int)y; //位置修正後のY座標を枠に反映
+        }
+    }
+    // Y軸の判定が終わった後、足元1ピクセル下を調べて確実に床があるかをチェック
+    // 小数点の切り捨てによる「ジャンプ不発」や「ガタつき」を防ぐ堅牢な手法
+    isGrounded = false;
+    if (velocityY >= 0.0f) {
+        SDL_Rect groundCheck = { (int)x, (int)y + 1, width, height };
+        for(const auto& collider : colliders){
+            if(Physics::CheckCollision(groundCheck, collider)){
+                isGrounded = true; // 足元に地面あり
+            }
         }
     }
 }

@@ -35,16 +35,15 @@ void DashState::Update(Player* player, float dt, const std::vector<SDL_Rect>& co
     }
 
     // ダッシュ状態から歩き状態に遷移する条件
-    if ((input.IsKeyDown(SDL_SCANCODE_LSHIFT) && !input.IsKeyDown(SDL_SCANCODE_D)) || (input.IsKeyDown(SDL_SCANCODE_RSHIFT) && !input.IsKeyDown(SDL_SCANCODE_A)) ||
-        (input.IsKeyDown(SDL_SCANCODE_LSHIFT) && !input.IsKeyDown(SDL_SCANCODE_RIGHT)) || (input.IsKeyDown(SDL_SCANCODE_RSHIFT) && !input.IsKeyDown(SDL_SCANCODE_LEFT))) {
-        // ダッシュキーが押されたので、ダッシュ状態へ
+    if (!input.IsKeyDown(SDL_SCANCODE_LSHIFT)) {
+        // ダッシュキーが離されたので歩きに遷移
         player->ChangeState(new WalkState());
         return;
     }
 
     // ジャンプ状態（Jump）へ遷移する条件
     // ジャンプキーが押されている、かつ地上にいるとき
-    if (input.IsKeyDown(SDL_SCANCODE_SPACE) && player->Grounded(colliders)) {
+    if (player->IsJumpPressed() && player->Grounded(colliders)) {
         player->ChangeState(new JumpState());
         return;
     }
