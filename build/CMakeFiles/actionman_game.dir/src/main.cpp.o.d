@@ -1,7 +1,6 @@
 CMakeFiles/actionman_game.dir/src/main.cpp.o: \
   /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/main.cpp \
   /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Core/Game.h \
-  /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Core/Camera.h \
   /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL.h \
   /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_main.h \
   /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_stdinc.h \

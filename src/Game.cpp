@@ -2,6 +2,7 @@
 #include "Core/Game.h"
 #include "Core/Constants.h"
 #include "Core/InputManager.h"
+#include "Core/Camera.h"
 #include <iostream>
 #include "Physics/Collider.h"
 

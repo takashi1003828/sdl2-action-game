@@ -1,10 +1,10 @@
 // include/Core/Game.h
 #pragma once
-#include "Core/Camera.h"
 #include <SDL2/SDL.h>
 #include <vector>
 #include "Entities/Player.h"
 
+class Camera;
 class Game {
 public:
     Game();
