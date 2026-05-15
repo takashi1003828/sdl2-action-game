@@ -14,7 +14,7 @@ public:
     void Update(float dt, const std::vector<SDL_Rect>& colliders);
     
     // 描画を行う
-    void Render(SDL_Renderer* renderer);
+    void Render(SDL_Renderer* renderer, int camX, int camY);
 
     // --- ステートパターン用の追加 ---
     // 状態を切り替える関数

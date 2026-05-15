@@ -153,6 +153,30 @@ src/AirState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/AirState.cpp.s
 .PHONY : src/AirState.cpp.s
 
+src/Camera.o: src/Camera.cpp.o
+.PHONY : src/Camera.o
+
+# target to build an object file
+src/Camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/Camera.cpp.o
+.PHONY : src/Camera.cpp.o
+
+src/Camera.i: src/Camera.cpp.i
+.PHONY : src/Camera.i
+
+# target to preprocess a source file
+src/Camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/Camera.cpp.i
+.PHONY : src/Camera.cpp.i
+
+src/Camera.s: src/Camera.cpp.s
+.PHONY : src/Camera.s
+
+# target to generate assembly for a file
+src/Camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/Camera.cpp.s
+.PHONY : src/Camera.cpp.s
+
 src/DashState.o: src/DashState.cpp.o
 .PHONY : src/DashState.o
 
@@ -357,6 +381,9 @@ help:
 	@echo "... src/AirState.o"
 	@echo "... src/AirState.i"
 	@echo "... src/AirState.s"
+	@echo "... src/Camera.o"
+	@echo "... src/Camera.i"
+	@echo "... src/Camera.s"
 	@echo "... src/DashState.o"
 	@echo "... src/DashState.i"
 	@echo "... src/DashState.s"

@@ -6,6 +6,7 @@
 #include "Core/InputManager.h"
 #include "Core/Constants.h"
 
+
 void IdleState::Enter(Player* player) {
 
 }

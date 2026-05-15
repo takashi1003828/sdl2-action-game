@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/actionman_game.dir/src/AirState.cpp.o"
   "CMakeFiles/actionman_game.dir/src/AirState.cpp.o.d"
+  "CMakeFiles/actionman_game.dir/src/Camera.cpp.o"
+  "CMakeFiles/actionman_game.dir/src/Camera.cpp.o.d"
   "CMakeFiles/actionman_game.dir/src/DashState.cpp.o"
   "CMakeFiles/actionman_game.dir/src/DashState.cpp.o.d"
   "CMakeFiles/actionman_game.dir/src/Game.cpp.o"

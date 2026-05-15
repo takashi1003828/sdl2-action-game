@@ -11,7 +11,9 @@ using namespace Constants;
 // コンストラクタとデストラクタ
 Game::Game() : window(nullptr), renderer(nullptr), isRunning(false), previousTime(0) {}
 
-Game::~Game() {}
+Game::~Game() {
+    delete camera;
+}
 
 //SDLやウィンドウ、レンダラーの初期化
 bool Game::Initialize(const char* title, int width, int height) {
@@ -33,6 +35,9 @@ bool Game::Initialize(const char* title, int width, int height) {
         return false;
     }
 
+    camera = new Camera(0.0f, 0.0f, 800.0f, 600.0f);
+    camera->SetTarget(&player);
+
     colliders.push_back({0, 500, 800, 100}); //地面の当たり判定
     colliders.push_back({300, 350, 200, 20}); //足場の当たり判定
     colliders.push_back({600, 400, 50, 100}); //足場の当たり判定
@@ -49,6 +54,7 @@ void Game::RunLoop() {
     while (isRunning) {
         ProcessInput();
         UpdateGame();
+        camera->Update();
         GenerateOutput();
     }
 }
@@ -98,13 +104,21 @@ void Game::GenerateOutput() {
     SDL_SetRenderDrawColor(renderer, 30, 30, 40, 255);
     SDL_RenderClear(renderer);
 
+    int camX = (int)camera->GetX();
+    int camY = (int)camera->GetY();
+
+
     // 地形の描画処理
     SDL_SetRenderDrawColor(renderer, 100, 255, 100, 255); //地形の色(緑)
     for (const auto& collider : colliders){
-        SDL_RenderFillRect(renderer, &collider);
+        SDL_Rect renderRect = collider;
+
+        renderRect.x -= camX;
+        renderRect.y -= camY;
+        SDL_RenderFillRect(renderer, &renderRect);
     }
     // Playerの描画処理
-    player.Render(renderer);
+    player.Render(renderer, camX, camY);
 
     // 描画の更新
     SDL_RenderPresent(renderer);

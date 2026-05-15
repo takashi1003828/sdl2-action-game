@@ -176,8 +176,8 @@ void Player::ChangeState(PlayerState* newState) {
     }
 }
 
-void Player::Render(SDL_Renderer* renderer) {
-    SDL_Rect playerRect = { (int)x, (int)y, width, height };
+void Player::Render(SDL_Renderer* renderer , int camX, int camY) {
+    SDL_Rect playerRect = { (int)x - camX, (int)y - camY, width, height };
     SDL_SetRenderDrawColor(renderer, 255, 100, 100, 255);   //　プレイヤーの色(赤)
     SDL_RenderFillRect(renderer, &playerRect);
 }

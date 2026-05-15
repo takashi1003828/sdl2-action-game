@@ -1,5 +1,6 @@
 // include/Core/Game.h
 #pragma once
+#include "Core/Camera.h"
 #include <SDL2/SDL.h>
 #include <vector>
 #include "Entities/Player.h"
@@ -24,6 +25,7 @@ private:
 
     SDL_Window* window;
     SDL_Renderer* renderer;
+    Camera* camera;
     bool isRunning;
     Uint64 previousTime;
 

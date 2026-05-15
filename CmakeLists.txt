@@ -25,6 +25,7 @@ set(SOURCES
     src/JumpState.cpp
     src/DashState.cpp
     src/AirState.cpp
+    src/Camera.cpp
 )
 
 # 実行ファイルを作成

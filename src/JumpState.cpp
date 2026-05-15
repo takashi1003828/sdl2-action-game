@@ -7,6 +7,7 @@
 #include "Entities/Player.h"
 #include "Core/Constants.h"
 
+
 using namespace Constants;
 
 void JumpState::Enter(Player* player) {

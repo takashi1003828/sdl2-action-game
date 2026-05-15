@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/AirState.cpp" "CMakeFiles/actionman_game.dir/src/AirState.cpp.o" "gcc" "CMakeFiles/actionman_game.dir/src/AirState.cpp.o.d"
+  "/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/Camera.cpp" "CMakeFiles/actionman_game.dir/src/Camera.cpp.o" "gcc" "CMakeFiles/actionman_game.dir/src/Camera.cpp.o.d"
   "/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/DashState.cpp" "CMakeFiles/actionman_game.dir/src/DashState.cpp.o" "gcc" "CMakeFiles/actionman_game.dir/src/DashState.cpp.o.d"
   "/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/Game.cpp" "CMakeFiles/actionman_game.dir/src/Game.cpp.o" "gcc" "CMakeFiles/actionman_game.dir/src/Game.cpp.o.d"
   "/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/IdleState.cpp" "CMakeFiles/actionman_game.dir/src/IdleState.cpp.o" "gcc" "CMakeFiles/actionman_game.dir/src/IdleState.cpp.o.d"
