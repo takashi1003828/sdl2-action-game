@@ -24,17 +24,14 @@ void Camera::Update(){
             py = target->GetY();
     }
 
-    float screenPx = px;
-    float screenPy = py;
+    float screenPx = px - x;
+    float screenPy = py - y;
 
     if(screenPx < deadzone.x){
         x = px - deadzone.x;
     }
     else if(screenPx > (deadzone.x + deadzone.w)){
         x = px - (deadzone.x + deadzone.w);
-    }
-    else{
-            x = 0;
     }
 
 }

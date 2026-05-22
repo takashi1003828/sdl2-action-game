@@ -20,4 +20,6 @@ private:
     int tileSize;
     // マップデータ本体（縦×横の2次元配列）
     std::vector<std::vector<int>> mapData; 
+
+    std::vector<SDL_Rect> GetSurround(SDL_Rect playerRect);
 };
