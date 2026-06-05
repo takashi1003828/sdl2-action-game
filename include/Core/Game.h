@@ -3,8 +3,16 @@
 #include <SDL2/SDL.h>
 #include <vector>
 #include "Entities/Player.h"
+#include "Core/Map.h"
 
 class Camera;
+
+enum class GameState {
+    PLAYING,
+    GAME_CLEAR,
+    GAME_OVER,
+};
+
 class Game {
 public:
     Game();
@@ -22,6 +30,8 @@ private:
     void ProcessInput();
     void UpdateGame();
     void GenerateOutput();
+    GameState currentState = GameState::PLAYING; // ゲームの状態を管理する変数
+
 
     SDL_Window* window;
     SDL_Renderer* renderer;
@@ -30,6 +40,7 @@ private:
     Uint64 previousTime;
 
     Player player;
+    Map myMap;
 
     //ステージ上の当たり判定を持つブロックのリスト
     std::vector<SDL_Rect> colliders;

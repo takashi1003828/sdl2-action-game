@@ -5,12 +5,13 @@
 #include "Core/Camera.h"
 #include <iostream>
 #include "Physics/Collider.h"
+#include "Core/CollisionManager.h"
 
 
 using namespace Constants;
 
 // コンストラクタとデストラクタ
-Game::Game() : window(nullptr), renderer(nullptr), isRunning(false), previousTime(0) {}
+Game::Game() : window(nullptr), renderer(nullptr), isRunning(false), previousTime(0),myMap(32) {}
 
 Game::~Game() {
     delete camera;
@@ -39,10 +40,17 @@ bool Game::Initialize(const char* title, int width, int height) {
     camera = new Camera(0.0f, 0.0f, 800.0f, 600.0f);
     camera->SetTarget(&player);
 
-    colliders.push_back({0, 500, 800, 100}); //地面の当たり判定
-    colliders.push_back({300, 350, 200, 20}); //足場の当たり判定
-    colliders.push_back({600, 400, 50, 100}); //足場の当たり判定
-    colliders.push_back({600, 400, 50, 100}); //右側の壁の当たり判定
+    myMap = Map(32); 
+
+    // プロジェクトルートからの相対パスを指定
+    if (!myMap.LoadFromCSV("../assets/maps/stage1.csv")) {
+        std::cout << "マップの読み込みに失敗しました！パスを確認してください。" << std::endl;
+        // 読み込み失敗時の処理（ゲームを終了するなど）
+    }
+
+    // ★ デバッグ出力1：読み込み直後の壁の数を確認！
+    std::cout << "[Init] Map loaded! Wall Count: " << myMap.GetWallColliders().size() << std::endl;
+
 
     // ループの準備
     isRunning = true;
@@ -83,26 +91,73 @@ void Game::ProcessInput() {
 
 //時間のカウントとプレイヤー更新処理
 void Game::UpdateGame() {
-    // フレームレート制御とデルタタイム計算
-    Uint64 frameStart = SDL_GetTicks64();
-    float dt = (frameStart - previousTime) / 1000.0f;
-    if(dt > 0.05f) dt = 0.05f;
-    previousTime = frameStart;
+    if(currentState == GameState::PLAYING){
+        // フレームレート制御とデルタタイム計算
+        Uint64 frameStart = SDL_GetTicks64();
+        float dt = (frameStart - previousTime) / 1000.0f;
+        if(dt > 0.05f) dt = 0.05f;
+        previousTime = frameStart;
 
-    // Playerの更新処理
-    player.Update(dt, colliders);
+        static int frameCount = 0;
+        if (frameCount % 60 == 0) {
+            std::cout << "[Update] Wall Count: " << myMap.GetWallColliders().size() 
+                  << " | Player X: " << player.GetX() 
+                  << " Y: " << player.GetY() << std::endl;
+        }
+    frameCount++;
 
-    // フレームレート制御
-    Uint32 frameTime = SDL_GetTicks() - frameStart;
-    if (frameTime < FRAME_DELAY) {
-        SDL_Delay(FRAME_DELAY - frameTime);
+         //ゲームオーバーの判定
+        if(player.GetY() > 480.0f){
+            currentState = GameState::GAME_OVER;
+            std::cout << "もう終わりだよ...奈落に落ちた..." << std::endl;
+        }
+        //ゲームクリアの判定
+        if(CollisionManager::CheckPlayerVsGoal(player.GetRect(), myMap.GetGoalColliders())){
+            currentState = GameState::GAME_CLEAR;
+            std::cout << "ステージクリア！おめでとう！" << std::endl;
+        }
+
+        // 「mapWalls」を取得（誕生）させる！
+        const std::vector<SDL_Rect>& mapWalls = myMap.GetWallColliders();
+
+
+        // Playerの更新処理
+        player.Update(dt, mapWalls);
+
+        const std::vector<SDL_Rect>& goalColliders = myMap.GetGoalColliders();
+
+        // フレームレート制御
+        Uint32 frameTime = SDL_GetTicks() - frameStart;
+        if (frameTime < FRAME_DELAY) {
+            SDL_Delay(FRAME_DELAY - frameTime);
+        }
+    }else{
+        auto& input = InputManager::GetInstance();
+        if (input.IsKeyDown(SDL_SCANCODE_R)){
+            // ゲームの状態をリセット
+            currentState = GameState::PLAYING;
+            // プレイヤーの位置や状態を初期化する処理を呼び出す（例: player.Reset()）
+            player = Player(); // プレイヤーオブジェクトを新しく作り直すことでリセット
+            std::cout << "ゲームをリセットしました！" << std::endl;
+        }
     }
+    
 }
 
 //　描画処理
 void Game::GenerateOutput() {
-    // 背景を塗りつぶし
-    SDL_SetRenderDrawColor(renderer, 30, 30, 40, 255);
+    // 状態に合わせて背景色（空の色）を変える
+    if (currentState == GameState::PLAYING) {
+        SDL_SetRenderDrawColor(renderer, 135, 206, 235, 255); // プレイ中：水色
+    } 
+    else if (currentState == GameState::GAME_OVER) {
+        SDL_SetRenderDrawColor(renderer, 200, 0, 0, 255);     // 死亡：血のような赤色
+    } 
+    else if (currentState == GameState::GAME_CLEAR) {
+        SDL_SetRenderDrawColor(renderer, 255, 215, 0, 255);   // クリア：黄金色
+    }
+
+    // 画面を塗りつぶす
     SDL_RenderClear(renderer);
 
     int camX = (int)camera->GetX();
@@ -118,6 +173,8 @@ void Game::GenerateOutput() {
         renderRect.y -= camY;
         SDL_RenderFillRect(renderer, &renderRect);
     }
+
+    myMap.Render(renderer, camX, camY);
     // Playerの描画処理
     player.Render(renderer, camX, camY);
 

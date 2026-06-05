@@ -23,6 +23,7 @@ public:
     // 状態クラスからプレイヤーの変数を操作するためのゲッター/セッター
     float GetX() const { return x; }
     float GetY() const { return y; }
+    SDL_Rect GetRect() const { return playerRect; }
 
     float targetMaxSpeed; // 状態クラスがプレイヤーの最大速度を指示するための変数
     float GetVelocityX() const { return velocityX; }

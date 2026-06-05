@@ -26,6 +26,8 @@ set(SOURCES
     src/DashState.cpp
     src/AirState.cpp
     src/Camera.cpp
+    src/Map.cpp
+    src/CollisionManager.cpp
 )
 
 # 実行ファイルを作成

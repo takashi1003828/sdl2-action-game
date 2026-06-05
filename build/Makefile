@@ -177,6 +177,30 @@ src/Camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/Camera.cpp.s
 .PHONY : src/Camera.cpp.s
 
+src/CollisionManager.o: src/CollisionManager.cpp.o
+.PHONY : src/CollisionManager.o
+
+# target to build an object file
+src/CollisionManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/CollisionManager.cpp.o
+.PHONY : src/CollisionManager.cpp.o
+
+src/CollisionManager.i: src/CollisionManager.cpp.i
+.PHONY : src/CollisionManager.i
+
+# target to preprocess a source file
+src/CollisionManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/CollisionManager.cpp.i
+.PHONY : src/CollisionManager.cpp.i
+
+src/CollisionManager.s: src/CollisionManager.cpp.s
+.PHONY : src/CollisionManager.s
+
+# target to generate assembly for a file
+src/CollisionManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/CollisionManager.cpp.s
+.PHONY : src/CollisionManager.cpp.s
+
 src/DashState.o: src/DashState.cpp.o
 .PHONY : src/DashState.o
 
@@ -297,6 +321,30 @@ src/JumpState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/JumpState.cpp.s
 .PHONY : src/JumpState.cpp.s
 
+src/Map.o: src/Map.cpp.o
+.PHONY : src/Map.o
+
+# target to build an object file
+src/Map.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/Map.cpp.o
+.PHONY : src/Map.cpp.o
+
+src/Map.i: src/Map.cpp.i
+.PHONY : src/Map.i
+
+# target to preprocess a source file
+src/Map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/Map.cpp.i
+.PHONY : src/Map.cpp.i
+
+src/Map.s: src/Map.cpp.s
+.PHONY : src/Map.s
+
+# target to generate assembly for a file
+src/Map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/Map.cpp.s
+.PHONY : src/Map.cpp.s
+
 src/Player.o: src/Player.cpp.o
 .PHONY : src/Player.o
 
@@ -384,6 +432,9 @@ help:
 	@echo "... src/Camera.o"
 	@echo "... src/Camera.i"
 	@echo "... src/Camera.s"
+	@echo "... src/CollisionManager.o"
+	@echo "... src/CollisionManager.i"
+	@echo "... src/CollisionManager.s"
 	@echo "... src/DashState.o"
 	@echo "... src/DashState.i"
 	@echo "... src/DashState.s"
@@ -399,6 +450,9 @@ help:
 	@echo "... src/JumpState.o"
 	@echo "... src/JumpState.i"
 	@echo "... src/JumpState.s"
+	@echo "... src/Map.o"
+	@echo "... src/Map.i"
+	@echo "... src/Map.s"
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"

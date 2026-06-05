@@ -9,6 +9,7 @@
 #include "Core/Constants.h"
 #include "Core/InputManager.h"
 #include "Physics/Collider.h"
+#include "Core/CollisionManager.h"
 #include <iostream>
 
 
@@ -36,7 +37,10 @@ Player::~Player() {}
 void Player::Update(float dt, const std::vector<SDL_Rect>& colliders) {
     auto& input = InputManager::GetInstance();
     
-
+    // ※もしここで既に爆発していたら、コンストラクタが呼ばれていないか、セーブ忘れです！
+    if (x > 10000.0f || velocityX > 10000.0f) {
+        std::cout << "[Trap A: Start] X: " << x << " | VelX: " << velocityX << std::endl;
+    }
     // ジャンプ判定
     isJumpPressed = input.IsKeyDown(SDL_SCANCODE_UP) || input.IsKeyDown(SDL_SCANCODE_W) || input.IsKeyDown(SDL_SCANCODE_SPACE);
 
@@ -45,8 +49,6 @@ void Player::Update(float dt, const std::vector<SDL_Rect>& colliders) {
         currentState->Update(this, dt, colliders);
     } 
 
-    
-    std::cout << typeid(*currentState).name() << std::endl;
 
     // 摩擦による減速
     Friction(dt);
@@ -63,12 +65,16 @@ void Player::Update(float dt, const std::vector<SDL_Rect>& colliders) {
     // プレイヤーの未来の当たり判定枠を用意する
     playerRect = { (int)x, (int)y, width, height };
 
+    // ※もし(1)では正常だったのに、ここで爆発していたら、この上の入力処理の中に犯人がいます！
+    if (x > 10000.0f || velocityX > 10000.0f) {
+        std::cout << "[Trap B: After Input] X: " << x << " | VelX: " << velocityX << std::endl;
+    }
+
     //x軸の移動と当たり判定
     MoveX(dt, colliders);
-    
-
     //y軸の移動と当たり判定
     MoveY(dt, colliders);
+
 
 }
 
@@ -78,48 +84,14 @@ void Player::Update(float dt, const std::vector<SDL_Rect>& colliders) {
 void Player::MoveX(float dt, const std::vector<SDL_Rect>& colliders){
      x += velocityX * dt;
     playerRect.x = (int)x; //移動後のX座標を枠に反映
-    for(const auto& collider : colliders){
-        if(Physics::CheckCollision(playerRect, collider)){
-            if (velocityX > 0){
-                x = collider.x - width; //右側の壁にぶつかった場合、プレイヤーの右端を壁の左端に合わせる
-            } else if (velocityX < 0){
-                x = collider.x + collider.w; //左側の壁にぶつかった場合、プレイヤーの左端を壁の右端に合わせる
-            }
-            //ぶつかった場合のめり込み解消処理
-            velocityX = 0.0f;
-            playerRect.x = (int)x; //位置修正後のX座標を枠に反映
-        }
-    }
+    CollisionManager::ResolveMapCollisionX(x, velocityX, playerRect, colliders);
 }
 
 void Player::MoveY(float dt, const std::vector<SDL_Rect>& colliders){
     y += velocityY * dt;
     playerRect.y = (int)y; //移動後のY座標を枠に反映
     isGrounded = false; //地面にいるかのフラグをリセット
-    for(const auto& collider : colliders){
-        if(Physics::CheckCollision(playerRect, collider)){
-            if (velocityY > 0){
-                y = collider.y - height; //地面に落ちる場合、プレイヤーの下端を地面の上端に合わせる
-                isGrounded = true; //地面にいるフラグを立てる
-            } else if (velocityY < 0){
-                y = collider.y + collider.h; //天井にぶつかる場合、プレイヤーの上端を天井の下端に合わせる
-            }
-            //ぶつかった場合のめり込み解消処理
-            velocityY = 0.0f;
-            playerRect.y = (int)y; //位置修正後のY座標を枠に反映
-        }
-    }
-    // Y軸の判定が終わった後、足元1ピクセル下を調べて確実に床があるかをチェック
-    // 小数点の切り捨てによる「ジャンプ不発」や「ガタつき」を防ぐ堅牢な手法
-    isGrounded = false;
-    if (velocityY >= 0.0f) {
-        SDL_Rect groundCheck = { (int)x, (int)y + 1, width, height };
-        for(const auto& collider : colliders){
-            if(Physics::CheckCollision(groundCheck, collider)){
-                isGrounded = true; // 足元に地面あり
-            }
-        }
-    }
+    CollisionManager::ResolveMapCollisionY(y, velocityY, playerRect, isGrounded, colliders);
 }
 
 bool Player::Grounded(const std::vector<SDL_Rect>& colliders){
