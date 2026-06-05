@@ -7,4 +7,10 @@ https://github.com/user-attachments/assets/63728314-dd4b-48fd-bc78-ca9fe29700f8
 main文で全て計算する形式で実装したのち人生初のリファクタリング（コードをファイルごとに分割）してうまく動作するところまで完了しました。<br>
 追記：ジャンプ中にジャンプボタンを押し続けるとfpsが下がっているような気がする。
 
+6/5日更新
+TOEICの学習と並行して少しずつ開発しました。<br>
+ステージをcsvファイルで作成してゲームオーバーゲームクリアの概念を作成しました。<br>
+https://github.com/user-attachments/assets/c9283cf4-62cf-44f8-8616-d232e06518a4
+
+
 
