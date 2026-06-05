@@ -272,6 +272,7 @@ actionman_game: CMakeFiles/actionman_game.dir/src/Map.cpp.o
 actionman_game: CMakeFiles/actionman_game.dir/src/CollisionManager.cpp.o
 actionman_game: CMakeFiles/actionman_game.dir/build.make
 actionman_game: /opt/homebrew/Cellar/sdl2/2.32.10/lib/libSDL2.dylib
+actionman_game: /opt/homebrew/lib/libSDL2_ttf.dylib
 actionman_game: CMakeFiles/actionman_game.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable actionman_game"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/actionman_game.dir/link.txt --verbose=$(VERBOSE)

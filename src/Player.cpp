@@ -26,6 +26,8 @@ Player::Player() {
     isGrounded = false;
     isMovingX = false;
     isJumpPressed = false;
+    targetMaxSpeed = MAX_WALK_SPEED;
+
     currentState = new IdleState(); // 最初は待機状態からスタート
     currentState->Enter(this); // 初期状態のEnter処理を呼び出す
 }
@@ -37,10 +39,7 @@ Player::~Player() {}
 void Player::Update(float dt, const std::vector<SDL_Rect>& colliders) {
     auto& input = InputManager::GetInstance();
     
-    // ※もしここで既に爆発していたら、コンストラクタが呼ばれていないか、セーブ忘れです！
-    if (x > 10000.0f || velocityX > 10000.0f) {
-        std::cout << "[Trap A: Start] X: " << x << " | VelX: " << velocityX << std::endl;
-    }
+    
     // ジャンプ判定
     isJumpPressed = input.IsKeyDown(SDL_SCANCODE_UP) || input.IsKeyDown(SDL_SCANCODE_W) || input.IsKeyDown(SDL_SCANCODE_SPACE);
 
@@ -64,11 +63,6 @@ void Player::Update(float dt, const std::vector<SDL_Rect>& colliders) {
 
     // プレイヤーの未来の当たり判定枠を用意する
     playerRect = { (int)x, (int)y, width, height };
-
-    // ※もし(1)では正常だったのに、ここで爆発していたら、この上の入力処理の中に犯人がいます！
-    if (x > 10000.0f || velocityX > 10000.0f) {
-        std::cout << "[Trap B: After Input] X: " << x << " | VelX: " << velocityX << std::endl;
-    }
 
     //x軸の移動と当たり判定
     MoveX(dt, colliders);

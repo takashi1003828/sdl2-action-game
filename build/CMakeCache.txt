@@ -222,6 +222,12 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //The directory containing a CMake configuration file for SDL2.
 SDL2_DIR:PATH=/opt/homebrew/lib/cmake/SDL2
 
+//Path to a file.
+SDL2_TTF_INCLUDE_DIR:PATH=/opt/homebrew/include/SDL2
+
+//Path to a library.
+SDL2_TTF_LIBRARY:FILEPATH=/opt/homebrew/lib/libSDL2_ttf.dylib
+
 //Value Computed by CMake
 actionman_game_BINARY_DIR:STATIC=/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build
 

@@ -37,6 +37,21 @@ bool Game::Initialize(const char* title, int width, int height) {
         return false;
     }
 
+    // ★ 1. TTF（フォントシステム）の初期化
+    if (TTF_Init() == -1) {
+        std::cout << "TTFの初期化エラー: " << TTF_GetError() << std::endl;
+        return false;
+    }
+
+    // ★ 2. フォントの読み込み（パスとサイズを指定）
+    // ※ assets/fonts フォルダを作り、適当なフリーフォント（.ttf）を入れてください！
+    font = TTF_OpenFont("../assets/fonts/dotto.ttf", 30); 
+    if (!font) {
+        std::cout << "フォント読み込み失敗: " << TTF_GetError() << std::endl;
+    } else {
+        CreateTextTextures(); // テクスチャ生成関数を呼ぶ
+    }
+
     camera = new Camera(0.0f, 0.0f, 800.0f, 600.0f);
     camera->SetTarget(&player);
 
@@ -98,14 +113,6 @@ void Game::UpdateGame() {
         if(dt > 0.05f) dt = 0.05f;
         previousTime = frameStart;
 
-        static int frameCount = 0;
-        if (frameCount % 60 == 0) {
-            std::cout << "[Update] Wall Count: " << myMap.GetWallColliders().size() 
-                  << " | Player X: " << player.GetX() 
-                  << " Y: " << player.GetY() << std::endl;
-        }
-    frameCount++;
-
          //ゲームオーバーの判定
         if(player.GetY() > 480.0f){
             currentState = GameState::GAME_OVER;
@@ -144,6 +151,23 @@ void Game::UpdateGame() {
     
 }
 
+void Game::CreateTextTextures() {
+    SDL_Color white = {255, 255, 255, 255}; // 文字色（白）
+
+    TTF_SetFontWrappedAlign(font, TTF_WRAPPED_ALIGN_CENTER);
+    // GAME OVER のテクスチャ作成
+    SDL_Surface* overSurface = TTF_RenderUTF8_Blended_Wrapped(font, "GAME OVER \n -Press [R] to Restart-", white, 800);
+    textGameOver = SDL_CreateTextureFromSurface(renderer, overSurface);
+    gameOverRect = { (800 - overSurface->w) / 2, 200, overSurface->w, overSurface->h }; // 画面中央に配置（画面幅800の場合）
+    SDL_FreeSurface(overSurface);
+
+    // GAME CLEAR のテクスチャ作成
+    SDL_Surface* clearSurface = TTF_RenderUTF8_Blended_Wrapped(font, "GAME CLEAR!! \n -Press [R] to Restart-", white, 800);
+    textGameClear = SDL_CreateTextureFromSurface(renderer, clearSurface);
+    gameClearRect = { (800 - clearSurface->w) / 2, 200, clearSurface->w, clearSurface->h };
+    SDL_FreeSurface(clearSurface);
+}
+
 //　描画処理
 void Game::GenerateOutput() {
     // 状態に合わせて背景色（空の色）を変える
@@ -177,6 +201,17 @@ void Game::GenerateOutput() {
     myMap.Render(renderer, camX, camY);
     // Playerの描画処理
     player.Render(renderer, camX, camY);
+
+    bool isBlinking = (SDL_GetTicks() / 500) % 2 == 0;
+
+    if (isBlinking) {
+        if (currentState == GameState::GAME_OVER && textGameOver != nullptr) {
+            SDL_RenderCopy(renderer, textGameOver, NULL, &gameOverRect);
+        }
+        else if (currentState == GameState::GAME_CLEAR && textGameClear != nullptr) {
+            SDL_RenderCopy(renderer, textGameClear, NULL, &gameClearRect);
+        }
+    }
 
     // 描画の更新
     SDL_RenderPresent(renderer);
