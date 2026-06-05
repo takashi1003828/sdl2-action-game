@@ -1,5 +1,5 @@
 #pragma once
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 namespace Physics {
     // 2つの短形が重なっているかを判定する静的関数

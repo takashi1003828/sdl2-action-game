@@ -2,11 +2,13 @@
 #pragma once
 #include <SDL2/SDL.h>
 #include <vector>
+#include <SDL_ttf.h>
 #include "Entities/Player.h"
 #include "Core/Map.h"
-#include <SDL_ttf.h>
 
 class Camera;
+class Player;
+class Map;
 
 enum class GameState {
     PLAYING,
@@ -38,7 +40,7 @@ private:
     SDL_Texture* textGameClear = nullptr;
     SDL_Rect gameOverRect;
     SDL_Rect gameClearRect;
-    
+
     GameState currentState = GameState::PLAYING; // ゲームの状態を管理する変数
 
 

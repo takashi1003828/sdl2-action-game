@@ -114,7 +114,7 @@ void Game::UpdateGame() {
         previousTime = frameStart;
 
          //ゲームオーバーの判定
-        if(player.GetY() > 480.0f){
+        if(player.GetY() > 600.0f){
             currentState = GameState::GAME_OVER;
             std::cout << "もう終わりだよ...奈落に落ちた..." << std::endl;
         }

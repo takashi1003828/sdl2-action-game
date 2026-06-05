@@ -1,7 +1,7 @@
 // include/Entities/Player.h
 #pragma once
-#include <SDL2/SDL.h>
 #include <vector>
+#include <SDL2/SDL.h>
 
 class PlayerState; // 前方宣言（PlayerStateクラスの完全な定義はPlayer.cppで行います）
 

@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>  // ← これがないと「std::vector」が使えない
-#include <SDL.h>   // ← これがないと「SDL_Rect」が使えない
+class SDL_Rect;
 class Player;
 class Collider;
 class PlayerState {

@@ -801,56 +801,55 @@ CMakeFiles/actionman_game.dir/src/AirState.cpp.o: /Volumes/Samsung_T7/ゲー�
   /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Entities/States/PlayerState.h \
   /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Entities/States/WalkState.h \
   /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL.h \
-  /opt/homebrew/include/SDL2/SDL.h \
-  /opt/homebrew/include/SDL2/SDL_assert.h \
-  /opt/homebrew/include/SDL2/SDL_atomic.h \
-  /opt/homebrew/include/SDL2/SDL_audio.h \
-  /opt/homebrew/include/SDL2/SDL_blendmode.h \
-  /opt/homebrew/include/SDL2/SDL_clipboard.h \
-  /opt/homebrew/include/SDL2/SDL_config.h \
-  /opt/homebrew/include/SDL2/SDL_cpuinfo.h \
-  /opt/homebrew/include/SDL2/SDL_endian.h \
-  /opt/homebrew/include/SDL2/SDL_error.h \
-  /opt/homebrew/include/SDL2/SDL_events.h \
-  /opt/homebrew/include/SDL2/SDL_filesystem.h \
-  /opt/homebrew/include/SDL2/SDL_gamecontroller.h \
-  /opt/homebrew/include/SDL2/SDL_gesture.h \
-  /opt/homebrew/include/SDL2/SDL_guid.h \
-  /opt/homebrew/include/SDL2/SDL_haptic.h \
-  /opt/homebrew/include/SDL2/SDL_hidapi.h \
-  /opt/homebrew/include/SDL2/SDL_hints.h \
-  /opt/homebrew/include/SDL2/SDL_joystick.h \
-  /opt/homebrew/include/SDL2/SDL_keyboard.h \
-  /opt/homebrew/include/SDL2/SDL_keycode.h \
-  /opt/homebrew/include/SDL2/SDL_loadso.h \
-  /opt/homebrew/include/SDL2/SDL_locale.h \
-  /opt/homebrew/include/SDL2/SDL_log.h \
-  /opt/homebrew/include/SDL2/SDL_main.h \
-  /opt/homebrew/include/SDL2/SDL_messagebox.h \
-  /opt/homebrew/include/SDL2/SDL_metal.h \
-  /opt/homebrew/include/SDL2/SDL_misc.h \
-  /opt/homebrew/include/SDL2/SDL_mouse.h \
-  /opt/homebrew/include/SDL2/SDL_mutex.h \
-  /opt/homebrew/include/SDL2/SDL_pixels.h \
-  /opt/homebrew/include/SDL2/SDL_platform.h \
-  /opt/homebrew/include/SDL2/SDL_power.h \
-  /opt/homebrew/include/SDL2/SDL_quit.h \
-  /opt/homebrew/include/SDL2/SDL_rect.h \
-  /opt/homebrew/include/SDL2/SDL_render.h \
-  /opt/homebrew/include/SDL2/SDL_rwops.h \
-  /opt/homebrew/include/SDL2/SDL_scancode.h \
-  /opt/homebrew/include/SDL2/SDL_sensor.h \
-  /opt/homebrew/include/SDL2/SDL_shape.h \
-  /opt/homebrew/include/SDL2/SDL_stdinc.h \
-  /opt/homebrew/include/SDL2/SDL_surface.h \
-  /opt/homebrew/include/SDL2/SDL_system.h \
-  /opt/homebrew/include/SDL2/SDL_thread.h \
-  /opt/homebrew/include/SDL2/SDL_timer.h \
-  /opt/homebrew/include/SDL2/SDL_touch.h \
-  /opt/homebrew/include/SDL2/SDL_version.h \
-  /opt/homebrew/include/SDL2/SDL_video.h \
-  /opt/homebrew/include/SDL2/begin_code.h \
-  /opt/homebrew/include/SDL2/close_code.h
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_assert.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_atomic.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_audio.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_blendmode.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_clipboard.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_config.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_cpuinfo.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_endian.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_error.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_events.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_filesystem.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_gamecontroller.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_gesture.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_guid.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_haptic.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_hidapi.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_hints.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_joystick.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_keyboard.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_keycode.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_loadso.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_locale.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_log.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_main.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_messagebox.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_metal.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_misc.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_mouse.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_mutex.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_pixels.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_platform.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_power.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_quit.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_rect.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_render.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_rwops.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_scancode.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_sensor.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_shape.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_stdinc.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_surface.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_system.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_thread.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_timer.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_touch.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_version.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_video.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/begin_code.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/close_code.h
 
 CMakeFiles/actionman_game.dir/src/Camera.cpp.o: /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/Camera.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -2536,8 +2535,7 @@ CMakeFiles/actionman_game.dir/src/CollisionManager.cpp.o: /Volumes/Samsung_T7/�
   /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_version.h \
   /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_video.h \
   /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/begin_code.h \
-  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/close_code.h \
-  /opt/homebrew/include/SDL2/SDL.h
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/close_code.h
 
 CMakeFiles/actionman_game.dir/src/DashState.cpp.o: /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/DashState.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -3339,56 +3337,55 @@ CMakeFiles/actionman_game.dir/src/DashState.cpp.o: /Volumes/Samsung_T7/ゲー
   /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Entities/States/PlayerState.h \
   /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Entities/States/WalkState.h \
   /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL.h \
-  /opt/homebrew/include/SDL2/SDL.h \
-  /opt/homebrew/include/SDL2/SDL_assert.h \
-  /opt/homebrew/include/SDL2/SDL_atomic.h \
-  /opt/homebrew/include/SDL2/SDL_audio.h \
-  /opt/homebrew/include/SDL2/SDL_blendmode.h \
-  /opt/homebrew/include/SDL2/SDL_clipboard.h \
-  /opt/homebrew/include/SDL2/SDL_config.h \
-  /opt/homebrew/include/SDL2/SDL_cpuinfo.h \
-  /opt/homebrew/include/SDL2/SDL_endian.h \
-  /opt/homebrew/include/SDL2/SDL_error.h \
-  /opt/homebrew/include/SDL2/SDL_events.h \
-  /opt/homebrew/include/SDL2/SDL_filesystem.h \
-  /opt/homebrew/include/SDL2/SDL_gamecontroller.h \
-  /opt/homebrew/include/SDL2/SDL_gesture.h \
-  /opt/homebrew/include/SDL2/SDL_guid.h \
-  /opt/homebrew/include/SDL2/SDL_haptic.h \
-  /opt/homebrew/include/SDL2/SDL_hidapi.h \
-  /opt/homebrew/include/SDL2/SDL_hints.h \
-  /opt/homebrew/include/SDL2/SDL_joystick.h \
-  /opt/homebrew/include/SDL2/SDL_keyboard.h \
-  /opt/homebrew/include/SDL2/SDL_keycode.h \
-  /opt/homebrew/include/SDL2/SDL_loadso.h \
-  /opt/homebrew/include/SDL2/SDL_locale.h \
-  /opt/homebrew/include/SDL2/SDL_log.h \
-  /opt/homebrew/include/SDL2/SDL_main.h \
-  /opt/homebrew/include/SDL2/SDL_messagebox.h \
-  /opt/homebrew/include/SDL2/SDL_metal.h \
-  /opt/homebrew/include/SDL2/SDL_misc.h \
-  /opt/homebrew/include/SDL2/SDL_mouse.h \
-  /opt/homebrew/include/SDL2/SDL_mutex.h \
-  /opt/homebrew/include/SDL2/SDL_pixels.h \
-  /opt/homebrew/include/SDL2/SDL_platform.h \
-  /opt/homebrew/include/SDL2/SDL_power.h \
-  /opt/homebrew/include/SDL2/SDL_quit.h \
-  /opt/homebrew/include/SDL2/SDL_rect.h \
-  /opt/homebrew/include/SDL2/SDL_render.h \
-  /opt/homebrew/include/SDL2/SDL_rwops.h \
-  /opt/homebrew/include/SDL2/SDL_scancode.h \
-  /opt/homebrew/include/SDL2/SDL_sensor.h \
-  /opt/homebrew/include/SDL2/SDL_shape.h \
-  /opt/homebrew/include/SDL2/SDL_stdinc.h \
-  /opt/homebrew/include/SDL2/SDL_surface.h \
-  /opt/homebrew/include/SDL2/SDL_system.h \
-  /opt/homebrew/include/SDL2/SDL_thread.h \
-  /opt/homebrew/include/SDL2/SDL_timer.h \
-  /opt/homebrew/include/SDL2/SDL_touch.h \
-  /opt/homebrew/include/SDL2/SDL_version.h \
-  /opt/homebrew/include/SDL2/SDL_video.h \
-  /opt/homebrew/include/SDL2/begin_code.h \
-  /opt/homebrew/include/SDL2/close_code.h
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_assert.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_atomic.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_audio.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_blendmode.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_clipboard.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_config.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_cpuinfo.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_endian.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_error.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_events.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_filesystem.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_gamecontroller.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_gesture.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_guid.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_haptic.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_hidapi.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_hints.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_joystick.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_keyboard.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_keycode.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_loadso.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_locale.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_log.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_main.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_messagebox.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_metal.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_misc.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_mouse.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_mutex.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_pixels.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_platform.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_power.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_quit.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_rect.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_render.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_rwops.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_scancode.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_sensor.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_shape.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_stdinc.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_surface.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_system.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_thread.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_timer.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_touch.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_version.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_video.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/begin_code.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/close_code.h
 
 CMakeFiles/actionman_game.dir/src/Game.cpp.o: /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/Game.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -5082,56 +5079,55 @@ CMakeFiles/actionman_game.dir/src/IdleState.cpp.o: /Volumes/Samsung_T7/ゲー
   /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Entities/States/PlayerState.h \
   /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Entities/States/WalkState.h \
   /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL.h \
-  /opt/homebrew/include/SDL2/SDL.h \
-  /opt/homebrew/include/SDL2/SDL_assert.h \
-  /opt/homebrew/include/SDL2/SDL_atomic.h \
-  /opt/homebrew/include/SDL2/SDL_audio.h \
-  /opt/homebrew/include/SDL2/SDL_blendmode.h \
-  /opt/homebrew/include/SDL2/SDL_clipboard.h \
-  /opt/homebrew/include/SDL2/SDL_config.h \
-  /opt/homebrew/include/SDL2/SDL_cpuinfo.h \
-  /opt/homebrew/include/SDL2/SDL_endian.h \
-  /opt/homebrew/include/SDL2/SDL_error.h \
-  /opt/homebrew/include/SDL2/SDL_events.h \
-  /opt/homebrew/include/SDL2/SDL_filesystem.h \
-  /opt/homebrew/include/SDL2/SDL_gamecontroller.h \
-  /opt/homebrew/include/SDL2/SDL_gesture.h \
-  /opt/homebrew/include/SDL2/SDL_guid.h \
-  /opt/homebrew/include/SDL2/SDL_haptic.h \
-  /opt/homebrew/include/SDL2/SDL_hidapi.h \
-  /opt/homebrew/include/SDL2/SDL_hints.h \
-  /opt/homebrew/include/SDL2/SDL_joystick.h \
-  /opt/homebrew/include/SDL2/SDL_keyboard.h \
-  /opt/homebrew/include/SDL2/SDL_keycode.h \
-  /opt/homebrew/include/SDL2/SDL_loadso.h \
-  /opt/homebrew/include/SDL2/SDL_locale.h \
-  /opt/homebrew/include/SDL2/SDL_log.h \
-  /opt/homebrew/include/SDL2/SDL_main.h \
-  /opt/homebrew/include/SDL2/SDL_messagebox.h \
-  /opt/homebrew/include/SDL2/SDL_metal.h \
-  /opt/homebrew/include/SDL2/SDL_misc.h \
-  /opt/homebrew/include/SDL2/SDL_mouse.h \
-  /opt/homebrew/include/SDL2/SDL_mutex.h \
-  /opt/homebrew/include/SDL2/SDL_pixels.h \
-  /opt/homebrew/include/SDL2/SDL_platform.h \
-  /opt/homebrew/include/SDL2/SDL_power.h \
-  /opt/homebrew/include/SDL2/SDL_quit.h \
-  /opt/homebrew/include/SDL2/SDL_rect.h \
-  /opt/homebrew/include/SDL2/SDL_render.h \
-  /opt/homebrew/include/SDL2/SDL_rwops.h \
-  /opt/homebrew/include/SDL2/SDL_scancode.h \
-  /opt/homebrew/include/SDL2/SDL_sensor.h \
-  /opt/homebrew/include/SDL2/SDL_shape.h \
-  /opt/homebrew/include/SDL2/SDL_stdinc.h \
-  /opt/homebrew/include/SDL2/SDL_surface.h \
-  /opt/homebrew/include/SDL2/SDL_system.h \
-  /opt/homebrew/include/SDL2/SDL_thread.h \
-  /opt/homebrew/include/SDL2/SDL_timer.h \
-  /opt/homebrew/include/SDL2/SDL_touch.h \
-  /opt/homebrew/include/SDL2/SDL_version.h \
-  /opt/homebrew/include/SDL2/SDL_video.h \
-  /opt/homebrew/include/SDL2/begin_code.h \
-  /opt/homebrew/include/SDL2/close_code.h
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_assert.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_atomic.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_audio.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_blendmode.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_clipboard.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_config.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_cpuinfo.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_endian.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_error.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_events.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_filesystem.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_gamecontroller.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_gesture.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_guid.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_haptic.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_hidapi.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_hints.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_joystick.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_keyboard.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_keycode.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_loadso.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_locale.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_log.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_main.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_messagebox.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_metal.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_misc.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_mouse.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_mutex.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_pixels.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_platform.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_power.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_quit.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_rect.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_render.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_rwops.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_scancode.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_sensor.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_shape.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_stdinc.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_surface.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_system.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_thread.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_timer.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_touch.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_version.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_video.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/begin_code.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/close_code.h
 
 CMakeFiles/actionman_game.dir/src/InputManager.cpp.o: /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/InputManager.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -6775,56 +6771,55 @@ CMakeFiles/actionman_game.dir/src/JumpState.cpp.o: /Volumes/Samsung_T7/ゲー
   /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Entities/States/PlayerState.h \
   /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Entities/States/WalkState.h \
   /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL.h \
-  /opt/homebrew/include/SDL2/SDL.h \
-  /opt/homebrew/include/SDL2/SDL_assert.h \
-  /opt/homebrew/include/SDL2/SDL_atomic.h \
-  /opt/homebrew/include/SDL2/SDL_audio.h \
-  /opt/homebrew/include/SDL2/SDL_blendmode.h \
-  /opt/homebrew/include/SDL2/SDL_clipboard.h \
-  /opt/homebrew/include/SDL2/SDL_config.h \
-  /opt/homebrew/include/SDL2/SDL_cpuinfo.h \
-  /opt/homebrew/include/SDL2/SDL_endian.h \
-  /opt/homebrew/include/SDL2/SDL_error.h \
-  /opt/homebrew/include/SDL2/SDL_events.h \
-  /opt/homebrew/include/SDL2/SDL_filesystem.h \
-  /opt/homebrew/include/SDL2/SDL_gamecontroller.h \
-  /opt/homebrew/include/SDL2/SDL_gesture.h \
-  /opt/homebrew/include/SDL2/SDL_guid.h \
-  /opt/homebrew/include/SDL2/SDL_haptic.h \
-  /opt/homebrew/include/SDL2/SDL_hidapi.h \
-  /opt/homebrew/include/SDL2/SDL_hints.h \
-  /opt/homebrew/include/SDL2/SDL_joystick.h \
-  /opt/homebrew/include/SDL2/SDL_keyboard.h \
-  /opt/homebrew/include/SDL2/SDL_keycode.h \
-  /opt/homebrew/include/SDL2/SDL_loadso.h \
-  /opt/homebrew/include/SDL2/SDL_locale.h \
-  /opt/homebrew/include/SDL2/SDL_log.h \
-  /opt/homebrew/include/SDL2/SDL_main.h \
-  /opt/homebrew/include/SDL2/SDL_messagebox.h \
-  /opt/homebrew/include/SDL2/SDL_metal.h \
-  /opt/homebrew/include/SDL2/SDL_misc.h \
-  /opt/homebrew/include/SDL2/SDL_mouse.h \
-  /opt/homebrew/include/SDL2/SDL_mutex.h \
-  /opt/homebrew/include/SDL2/SDL_pixels.h \
-  /opt/homebrew/include/SDL2/SDL_platform.h \
-  /opt/homebrew/include/SDL2/SDL_power.h \
-  /opt/homebrew/include/SDL2/SDL_quit.h \
-  /opt/homebrew/include/SDL2/SDL_rect.h \
-  /opt/homebrew/include/SDL2/SDL_render.h \
-  /opt/homebrew/include/SDL2/SDL_rwops.h \
-  /opt/homebrew/include/SDL2/SDL_scancode.h \
-  /opt/homebrew/include/SDL2/SDL_sensor.h \
-  /opt/homebrew/include/SDL2/SDL_shape.h \
-  /opt/homebrew/include/SDL2/SDL_stdinc.h \
-  /opt/homebrew/include/SDL2/SDL_surface.h \
-  /opt/homebrew/include/SDL2/SDL_system.h \
-  /opt/homebrew/include/SDL2/SDL_thread.h \
-  /opt/homebrew/include/SDL2/SDL_timer.h \
-  /opt/homebrew/include/SDL2/SDL_touch.h \
-  /opt/homebrew/include/SDL2/SDL_version.h \
-  /opt/homebrew/include/SDL2/SDL_video.h \
-  /opt/homebrew/include/SDL2/begin_code.h \
-  /opt/homebrew/include/SDL2/close_code.h
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_assert.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_atomic.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_audio.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_blendmode.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_clipboard.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_config.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_cpuinfo.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_endian.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_error.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_events.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_filesystem.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_gamecontroller.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_gesture.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_guid.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_haptic.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_hidapi.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_hints.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_joystick.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_keyboard.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_keycode.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_loadso.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_locale.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_log.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_main.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_messagebox.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_metal.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_misc.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_mouse.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_mutex.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_pixels.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_platform.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_power.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_quit.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_rect.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_render.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_rwops.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_scancode.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_sensor.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_shape.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_stdinc.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_surface.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_system.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_thread.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_timer.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_touch.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_version.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_video.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/begin_code.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/close_code.h
 
 CMakeFiles/actionman_game.dir/src/Map.cpp.o: /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/Map.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -8619,8 +8614,7 @@ CMakeFiles/actionman_game.dir/src/Player.cpp.o: /Volumes/Samsung_T7/ゲーム
   /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_version.h \
   /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_video.h \
   /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/begin_code.h \
-  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/close_code.h \
-  /opt/homebrew/include/SDL2/SDL.h
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/close_code.h
 
 CMakeFiles/actionman_game.dir/src/WalkState.cpp.o: /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/WalkState.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -9422,56 +9416,55 @@ CMakeFiles/actionman_game.dir/src/WalkState.cpp.o: /Volumes/Samsung_T7/ゲー
   /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Entities/States/PlayerState.h \
   /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Entities/States/WalkState.h \
   /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL.h \
-  /opt/homebrew/include/SDL2/SDL.h \
-  /opt/homebrew/include/SDL2/SDL_assert.h \
-  /opt/homebrew/include/SDL2/SDL_atomic.h \
-  /opt/homebrew/include/SDL2/SDL_audio.h \
-  /opt/homebrew/include/SDL2/SDL_blendmode.h \
-  /opt/homebrew/include/SDL2/SDL_clipboard.h \
-  /opt/homebrew/include/SDL2/SDL_config.h \
-  /opt/homebrew/include/SDL2/SDL_cpuinfo.h \
-  /opt/homebrew/include/SDL2/SDL_endian.h \
-  /opt/homebrew/include/SDL2/SDL_error.h \
-  /opt/homebrew/include/SDL2/SDL_events.h \
-  /opt/homebrew/include/SDL2/SDL_filesystem.h \
-  /opt/homebrew/include/SDL2/SDL_gamecontroller.h \
-  /opt/homebrew/include/SDL2/SDL_gesture.h \
-  /opt/homebrew/include/SDL2/SDL_guid.h \
-  /opt/homebrew/include/SDL2/SDL_haptic.h \
-  /opt/homebrew/include/SDL2/SDL_hidapi.h \
-  /opt/homebrew/include/SDL2/SDL_hints.h \
-  /opt/homebrew/include/SDL2/SDL_joystick.h \
-  /opt/homebrew/include/SDL2/SDL_keyboard.h \
-  /opt/homebrew/include/SDL2/SDL_keycode.h \
-  /opt/homebrew/include/SDL2/SDL_loadso.h \
-  /opt/homebrew/include/SDL2/SDL_locale.h \
-  /opt/homebrew/include/SDL2/SDL_log.h \
-  /opt/homebrew/include/SDL2/SDL_main.h \
-  /opt/homebrew/include/SDL2/SDL_messagebox.h \
-  /opt/homebrew/include/SDL2/SDL_metal.h \
-  /opt/homebrew/include/SDL2/SDL_misc.h \
-  /opt/homebrew/include/SDL2/SDL_mouse.h \
-  /opt/homebrew/include/SDL2/SDL_mutex.h \
-  /opt/homebrew/include/SDL2/SDL_pixels.h \
-  /opt/homebrew/include/SDL2/SDL_platform.h \
-  /opt/homebrew/include/SDL2/SDL_power.h \
-  /opt/homebrew/include/SDL2/SDL_quit.h \
-  /opt/homebrew/include/SDL2/SDL_rect.h \
-  /opt/homebrew/include/SDL2/SDL_render.h \
-  /opt/homebrew/include/SDL2/SDL_rwops.h \
-  /opt/homebrew/include/SDL2/SDL_scancode.h \
-  /opt/homebrew/include/SDL2/SDL_sensor.h \
-  /opt/homebrew/include/SDL2/SDL_shape.h \
-  /opt/homebrew/include/SDL2/SDL_stdinc.h \
-  /opt/homebrew/include/SDL2/SDL_surface.h \
-  /opt/homebrew/include/SDL2/SDL_system.h \
-  /opt/homebrew/include/SDL2/SDL_thread.h \
-  /opt/homebrew/include/SDL2/SDL_timer.h \
-  /opt/homebrew/include/SDL2/SDL_touch.h \
-  /opt/homebrew/include/SDL2/SDL_version.h \
-  /opt/homebrew/include/SDL2/SDL_video.h \
-  /opt/homebrew/include/SDL2/begin_code.h \
-  /opt/homebrew/include/SDL2/close_code.h
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_assert.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_atomic.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_audio.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_blendmode.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_clipboard.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_config.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_cpuinfo.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_endian.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_error.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_events.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_filesystem.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_gamecontroller.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_gesture.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_guid.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_haptic.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_hidapi.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_hints.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_joystick.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_keyboard.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_keycode.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_loadso.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_locale.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_log.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_main.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_messagebox.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_metal.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_misc.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_mouse.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_mutex.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_pixels.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_platform.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_power.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_quit.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_rect.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_render.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_rwops.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_scancode.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_sensor.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_shape.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_stdinc.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_surface.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_system.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_thread.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_timer.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_touch.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_version.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_video.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/begin_code.h \
+  /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/close_code.h
 
 CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/main.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -10357,7 +10350,13 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 
 /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/IdleState.cpp:
 
+/opt/homebrew/include/SDL2/close_code.h:
+
+/opt/homebrew/include/SDL2/begin_code.h:
+
 /opt/homebrew/include/SDL2/SDL_ttf.h:
+
+/opt/homebrew/include/SDL2/SDL.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_status.h:
 
@@ -10379,9 +10378,13 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/ranges_iterator_traits.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/erase_if_container.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__hash_table:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/queue.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/deque.h:
 
@@ -10404,6 +10407,8 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/DashState.cpp:
 
 /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Core/CollisionManager.h:
+
+/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Core/Camera.h:
 
 /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/close_code.h:
 
@@ -10467,77 +10472,9 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 
 /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_assert.h:
 
-/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Core/Camera.h:
-
-/opt/homebrew/include/SDL2/close_code.h:
-
-/opt/homebrew/include/SDL2/begin_code.h:
-
-/opt/homebrew/include/SDL2/SDL_video.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/queue.h:
-
-/opt/homebrew/include/SDL2/SDL_version.h:
-
-/opt/homebrew/include/SDL2/SDL_timer.h:
-
-/opt/homebrew/include/SDL2/SDL_system.h:
-
-/opt/homebrew/include/SDL2/SDL_sensor.h:
-
-/opt/homebrew/include/SDL2/SDL_rwops.h:
-
-/opt/homebrew/include/SDL2/SDL_render.h:
-
-/opt/homebrew/include/SDL2/SDL_rect.h:
-
-/opt/homebrew/include/SDL2/SDL_power.h:
-
-/opt/homebrew/include/SDL2/SDL_mouse.h:
-
-/opt/homebrew/include/SDL2/SDL_misc.h:
-
-/opt/homebrew/include/SDL2/SDL_metal.h:
-
-/opt/homebrew/include/SDL2/SDL_main.h:
-
-/opt/homebrew/include/SDL2/SDL_locale.h:
-
-/opt/homebrew/include/SDL2/SDL_loadso.h:
-
-/opt/homebrew/include/SDL2/SDL_keycode.h:
-
-/opt/homebrew/include/SDL2/SDL_hidapi.h:
-
-/opt/homebrew/include/SDL2/SDL_haptic.h:
-
-/opt/homebrew/include/SDL2/SDL_guid.h:
-
-/opt/homebrew/include/SDL2/SDL_filesystem.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/ranges_iterator_traits.h:
-
-/opt/homebrew/include/SDL2/SDL_cpuinfo.h:
-
-/opt/homebrew/include/SDL2/SDL_config.h:
-
-/opt/homebrew/include/SDL2/SDL_log.h:
-
-/opt/homebrew/include/SDL2/SDL_clipboard.h:
-
-/opt/homebrew/include/SDL2/SDL_blendmode.h:
-
-/opt/homebrew/include/SDL2/SDL_atomic.h:
-
-/opt/homebrew/include/SDL2/SDL_assert.h:
-
-/opt/homebrew/include/SDL2/SDL.h:
-
 /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL.h:
 
 /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Entities/States/PlayerState.h:
-
-/opt/homebrew/include/SDL2/SDL_audio.h:
 
 /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Entities/States/IdleState.h:
 
@@ -10608,8 +10545,6 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/mem_fun_ref.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uid_t.h:
-
-/opt/homebrew/include/SDL2/SDL_surface.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__mutex/mutex.h:
 
@@ -10710,8 +10645,6 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/__endian.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_blkcnt_t.h:
-
-/opt/homebrew/include/SDL2/SDL_gesture.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h:
 
@@ -10818,8 +10751,6 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/include/Entities/States/WalkState.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ctype.h:
-
-/opt/homebrew/include/SDL2/SDL_gamecontroller.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/errno.h:
 
@@ -11093,8 +11024,6 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/conditional.h:
 
-/opt/homebrew/include/SDL2/SDL_thread.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/alignment_of.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/atomic_flag.h:
@@ -11325,8 +11254,6 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/fdim.h:
 
-/opt/homebrew/include/SDL2/SDL_pixels.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/log2.h:
 
 /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2/SDL_platform.h:
@@ -11344,8 +11271,6 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/endian.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_endian.h:
-
-/opt/homebrew/include/SDL2/SDL_platform.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/limits:
 
@@ -11521,8 +11446,6 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/reverse_access.h:
 
-/opt/homebrew/include/SDL2/SDL_events.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/totally_ordered.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/fstream.h:
@@ -11611,8 +11534,6 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_standard_layout.h:
 
-/opt/homebrew/include/SDL2/SDL_shape.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_off_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/move.h:
@@ -11691,8 +11612,6 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/to_chars_integral.h:
 
-/opt/homebrew/include/SDL2/SDL_error.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_nl_item.h:
@@ -11705,11 +11624,7 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/to_chars_base_10.h:
 
-/opt/homebrew/include/SDL2/SDL_hints.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/inverse_trigonometric_functions.h:
-
-/opt/homebrew/include/SDL2/SDL_mutex.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/bit_reference.h:
 
@@ -11720,8 +11635,6 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/three_way_comp_ref_type.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/wctype.h:
-
-/opt/homebrew/include/SDL2/SDL_joystick.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/blsr.h:
 
@@ -11836,8 +11749,6 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/sort.h:
 
 /Volumes/Samsung_T7/xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/__stddef_size_t.h:
-
-/opt/homebrew/include/SDL2/SDL_touch.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_bounded_array.h:
 
@@ -12059,8 +11970,6 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/for_each_segment.h:
 
-/opt/homebrew/include/SDL2/SDL_keyboard.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale/_string.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__compare/synth_three_way.h:
@@ -12072,8 +11981,6 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/climits:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/for_each.h:
-
-/opt/homebrew/include/SDL2/SDL_quit.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__xlocale.h:
 
@@ -12092,8 +11999,6 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/count_if.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int8_t.h:
-
-/opt/homebrew/include/SDL2/SDL_messagebox.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/is_partitioned.h:
 
@@ -12151,10 +12056,6 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h:
 
-/opt/homebrew/include/SDL2/SDL_scancode.h:
-
-/opt/homebrew/include/SDL2/SDL_endian.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_assignable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/functional:
@@ -12172,8 +12073,6 @@ CMakeFiles/actionman_game.dir/src/main.cpp.o: /Volumes/Samsung_T7/ゲーム/�
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_volatile.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/tuple_like_ext.h:
-
-/opt/homebrew/include/SDL2/SDL_stdinc.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_time.h:
 
