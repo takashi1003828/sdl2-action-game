@@ -6,15 +6,14 @@
 #include <iostream>
 #include "Physics/Collider.h"
 #include "Core/CollisionManager.h"
-
+#include "Core/PlayState.h"
 
 using namespace Constants;
 
 // コンストラクタとデストラクタ
-Game::Game() : window(nullptr), renderer(nullptr), isRunning(false), previousTime(0),myMap(32) {}
+Game::Game() : window(nullptr), renderer(nullptr), isRunning(false), previousTime(0) {}
 
 Game::~Game() {
-    delete camera;
 }
 
 //SDLやウィンドウ、レンダラーの初期化
@@ -44,28 +43,17 @@ bool Game::Initialize(const char* title, int width, int height) {
     }
 
     // ★ 2. フォントの読み込み（パスとサイズを指定）
-    // ※ assets/fonts フォルダを作り、適当なフリーフォント（.ttf）を入れてください！
     font = TTF_OpenFont("../assets/fonts/dotto.ttf", 30); 
     if (!font) {
         std::cout << "フォント読み込み失敗: " << TTF_GetError() << std::endl;
     } else {
-        CreateTextTextures(); // テクスチャ生成関数を呼ぶ
+        uiManager.Initialize(renderer, font);
     }
 
-    camera = new Camera(0.0f, 0.0f, 800.0f, 600.0f);
-    camera->SetTarget(&player);
 
-    myMap = Map(32); 
+   
 
-    // プロジェクトルートからの相対パスを指定
-    if (!myMap.LoadFromCSV("../assets/maps/stage1.csv")) {
-        std::cout << "マップの読み込みに失敗しました！パスを確認してください。" << std::endl;
-        // 読み込み失敗時の処理（ゲームを終了するなど）
-    }
-
-    // ★ デバッグ出力1：読み込み直後の壁の数を確認！
-    std::cout << "[Init] Map loaded! Wall Count: " << myMap.GetWallColliders().size() << std::endl;
-
+    gamestateManager.ChangeState(new PlayState());
 
     // ループの準備
     isRunning = true;
@@ -78,7 +66,6 @@ void Game::RunLoop() {
     while (isRunning) {
         ProcessInput();
         UpdateGame();
-        camera->Update();
         GenerateOutput();
     }
 }
@@ -87,6 +74,8 @@ void Game::RunLoop() {
 void Game::Shutdown() {
     if (renderer) SDL_DestroyRenderer(renderer);
     if (window) SDL_DestroyWindow(window);
+    uiManager.Shutdown();
+    if(font) TTF_CloseFont(font);
     SDL_Quit();
 }
 
@@ -102,117 +91,64 @@ void Game::ProcessInput() {
             isRunning = false;
         }
     }
+
+    gamestateManager.ProcessInput();
 }
 
 //時間のカウントとプレイヤー更新処理
 void Game::UpdateGame() {
-    if(currentState == GameState::PLAYING){
-        // フレームレート制御とデルタタイム計算
-        Uint64 frameStart = SDL_GetTicks64();
-        float dt = (frameStart - previousTime) / 1000.0f;
-        if(dt > 0.05f) dt = 0.05f;
-        previousTime = frameStart;
+    // フレームレート制御とデルタタイム計算
+    Uint64 frameStart = SDL_GetTicks64();
+    float dt = (frameStart - previousTime) / 1000.0f;
+    if(dt > 0.05f) dt = 0.05f;
 
-         //ゲームオーバーの判定
-        if(player.GetY() > 600.0f){
-            currentState = GameState::GAME_OVER;
-            std::cout << "もう終わりだよ...奈落に落ちた..." << std::endl;
-        }
-        //ゲームクリアの判定
-        if(CollisionManager::CheckPlayerVsGoal(player.GetRect(), myMap.GetGoalColliders())){
-            currentState = GameState::GAME_CLEAR;
-            std::cout << "ステージクリア！おめでとう！" << std::endl;
-        }
+    previousTime = frameStart;
 
-        // 「mapWalls」を取得（誕生）させる！
-        const std::vector<SDL_Rect>& mapWalls = myMap.GetWallColliders();
-
-
-        // Playerの更新処理
-        player.Update(dt, mapWalls);
-
-        const std::vector<SDL_Rect>& goalColliders = myMap.GetGoalColliders();
-
-        // フレームレート制御
-        Uint32 frameTime = SDL_GetTicks() - frameStart;
-        if (frameTime < FRAME_DELAY) {
-            SDL_Delay(FRAME_DELAY - frameTime);
-        }
-    }else{
-        auto& input = InputManager::GetInstance();
-        if (input.IsKeyDown(SDL_SCANCODE_R)){
-            // ゲームの状態をリセット
-            currentState = GameState::PLAYING;
-            // プレイヤーの位置や状態を初期化する処理を呼び出す（例: player.Reset()）
-            player = Player(); // プレイヤーオブジェクトを新しく作り直すことでリセット
-            std::cout << "ゲームをリセットしました！" << std::endl;
-        }
+    gamestateManager.Update(dt);
+     // フレームレート制御
+    Uint32 frameTime = SDL_GetTicks() - frameStart;
+    if (frameTime < FRAME_DELAY) {
+        SDL_Delay(FRAME_DELAY - frameTime);
     }
     
-}
-
-void Game::CreateTextTextures() {
-    SDL_Color white = {255, 255, 255, 255}; // 文字色（白）
-
-    TTF_SetFontWrappedAlign(font, TTF_WRAPPED_ALIGN_CENTER);
-    // GAME OVER のテクスチャ作成
-    SDL_Surface* overSurface = TTF_RenderUTF8_Blended_Wrapped(font, "GAME OVER \n -Press [R] to Restart-", white, 800);
-    textGameOver = SDL_CreateTextureFromSurface(renderer, overSurface);
-    gameOverRect = { (800 - overSurface->w) / 2, 200, overSurface->w, overSurface->h }; // 画面中央に配置（画面幅800の場合）
-    SDL_FreeSurface(overSurface);
-
-    // GAME CLEAR のテクスチャ作成
-    SDL_Surface* clearSurface = TTF_RenderUTF8_Blended_Wrapped(font, "GAME CLEAR!! \n -Press [R] to Restart-", white, 800);
-    textGameClear = SDL_CreateTextureFromSurface(renderer, clearSurface);
-    gameClearRect = { (800 - clearSurface->w) / 2, 200, clearSurface->w, clearSurface->h };
-    SDL_FreeSurface(clearSurface);
+    // }else{
+    //     auto& input = InputManager::GetInstance();
+    //     if (input.IsKeyDown(SDL_SCANCODE_R)){
+    //         // ゲームの状態をリセット
+    //         currentState = GameState::PLAYING;
+    //         // プレイヤーの位置や状態を初期化する処理を呼び出す（例: player.Reset()）
+    //         player = Player(); // プレイヤーオブジェクトを新しく作り直すことでリセット
+    //         std::cout << "ゲームをリセットしました！" << std::endl;
+    //     }
+    // }
+    
 }
 
 //　描画処理
 void Game::GenerateOutput() {
-    // 状態に合わせて背景色（空の色）を変える
-    if (currentState == GameState::PLAYING) {
-        SDL_SetRenderDrawColor(renderer, 135, 206, 235, 255); // プレイ中：水色
-    } 
-    else if (currentState == GameState::GAME_OVER) {
-        SDL_SetRenderDrawColor(renderer, 200, 0, 0, 255);     // 死亡：血のような赤色
-    } 
-    else if (currentState == GameState::GAME_CLEAR) {
-        SDL_SetRenderDrawColor(renderer, 255, 215, 0, 255);   // クリア：黄金色
-    }
+    // // 状態に合わせて背景色（空の色）を変える
+    // if (currentState == GameState::PLAYING) {
+    //     SDL_SetRenderDrawColor(renderer, 135, 206, 235, 255); // プレイ中：水色
+    // } 
+    // else if (currentState == GameState::GAME_OVER) {
+    //     SDL_SetRenderDrawColor(renderer, 200, 0, 0, 255);     // 死亡：血のような赤色
+    // } 
+    // else if (currentState == GameState::GAME_CLEAR) {
+    //     SDL_SetRenderDrawColor(renderer, 255, 215, 0, 255);   // クリア：黄金色
+    // }
 
-    // 画面を塗りつぶす
-    SDL_RenderClear(renderer);
+    
+    // bool isBlinking = (SDL_GetTicks() / 500) % 2 == 0;
 
-    int camX = (int)camera->GetX();
-    int camY = (int)camera->GetY();
-
-
-    // 地形の描画処理
-    SDL_SetRenderDrawColor(renderer, 100, 255, 100, 255); //地形の色(緑)
-    for (const auto& collider : colliders){
-        SDL_Rect renderRect = collider;
-
-        renderRect.x -= camX;
-        renderRect.y -= camY;
-        SDL_RenderFillRect(renderer, &renderRect);
-    }
-
-    myMap.Render(renderer, camX, camY);
-    // Playerの描画処理
-    player.Render(renderer, camX, camY);
-
-    bool isBlinking = (SDL_GetTicks() / 500) % 2 == 0;
-
-    if (isBlinking) {
-        if (currentState == GameState::GAME_OVER && textGameOver != nullptr) {
-            SDL_RenderCopy(renderer, textGameOver, NULL, &gameOverRect);
-        }
-        else if (currentState == GameState::GAME_CLEAR && textGameClear != nullptr) {
-            SDL_RenderCopy(renderer, textGameClear, NULL, &gameClearRect);
-        }
-    }
-
+    // if (isBlinking) {
+    //     if (currentState == GameState::GAME_OVER) {
+    //         uiManager.DrawGameOver(renderer);
+    //     }
+    //     else if (currentState == GameState::GAME_CLEAR) {
+    //         uiManager.DrawGameClear(renderer);
+    //     }
+    // }
+    gamestateManager.Render(renderer, &uiManager);
     // 描画の更新
     SDL_RenderPresent(renderer);
 }

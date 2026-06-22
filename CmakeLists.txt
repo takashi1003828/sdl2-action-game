@@ -35,6 +35,11 @@ set(SOURCES
     src/Camera.cpp
     src/Map.cpp
     src/CollisionManager.cpp
+    src/UIManager.cpp
+    src/PlayState.cpp
+    src/GameStateManager.cpp
+    src/GameOverState.cpp
+    src/GameClearState.cpp
 )
 
 # 実行ファイルを作成

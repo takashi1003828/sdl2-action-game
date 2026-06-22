@@ -240,6 +240,76 @@ CMakeFiles/actionman_game.dir/src/CollisionManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/actionman_game.dir/src/CollisionManager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/CollisionManager.cpp -o CMakeFiles/actionman_game.dir/src/CollisionManager.cpp.s
 
+CMakeFiles/actionman_game.dir/src/UIManager.cpp.o: CMakeFiles/actionman_game.dir/flags.make
+CMakeFiles/actionman_game.dir/src/UIManager.cpp.o: /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/UIManager.cpp
+CMakeFiles/actionman_game.dir/src/UIManager.cpp.o: CMakeFiles/actionman_game.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/actionman_game.dir/src/UIManager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/actionman_game.dir/src/UIManager.cpp.o -MF CMakeFiles/actionman_game.dir/src/UIManager.cpp.o.d -o CMakeFiles/actionman_game.dir/src/UIManager.cpp.o -c /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/UIManager.cpp
+
+CMakeFiles/actionman_game.dir/src/UIManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/actionman_game.dir/src/UIManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/UIManager.cpp > CMakeFiles/actionman_game.dir/src/UIManager.cpp.i
+
+CMakeFiles/actionman_game.dir/src/UIManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/actionman_game.dir/src/UIManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/UIManager.cpp -o CMakeFiles/actionman_game.dir/src/UIManager.cpp.s
+
+CMakeFiles/actionman_game.dir/src/PlayState.cpp.o: CMakeFiles/actionman_game.dir/flags.make
+CMakeFiles/actionman_game.dir/src/PlayState.cpp.o: /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/PlayState.cpp
+CMakeFiles/actionman_game.dir/src/PlayState.cpp.o: CMakeFiles/actionman_game.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/actionman_game.dir/src/PlayState.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/actionman_game.dir/src/PlayState.cpp.o -MF CMakeFiles/actionman_game.dir/src/PlayState.cpp.o.d -o CMakeFiles/actionman_game.dir/src/PlayState.cpp.o -c /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/PlayState.cpp
+
+CMakeFiles/actionman_game.dir/src/PlayState.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/actionman_game.dir/src/PlayState.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/PlayState.cpp > CMakeFiles/actionman_game.dir/src/PlayState.cpp.i
+
+CMakeFiles/actionman_game.dir/src/PlayState.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/actionman_game.dir/src/PlayState.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/PlayState.cpp -o CMakeFiles/actionman_game.dir/src/PlayState.cpp.s
+
+CMakeFiles/actionman_game.dir/src/GameStateManager.cpp.o: CMakeFiles/actionman_game.dir/flags.make
+CMakeFiles/actionman_game.dir/src/GameStateManager.cpp.o: /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/GameStateManager.cpp
+CMakeFiles/actionman_game.dir/src/GameStateManager.cpp.o: CMakeFiles/actionman_game.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/actionman_game.dir/src/GameStateManager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/actionman_game.dir/src/GameStateManager.cpp.o -MF CMakeFiles/actionman_game.dir/src/GameStateManager.cpp.o.d -o CMakeFiles/actionman_game.dir/src/GameStateManager.cpp.o -c /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/GameStateManager.cpp
+
+CMakeFiles/actionman_game.dir/src/GameStateManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/actionman_game.dir/src/GameStateManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/GameStateManager.cpp > CMakeFiles/actionman_game.dir/src/GameStateManager.cpp.i
+
+CMakeFiles/actionman_game.dir/src/GameStateManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/actionman_game.dir/src/GameStateManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/GameStateManager.cpp -o CMakeFiles/actionman_game.dir/src/GameStateManager.cpp.s
+
+CMakeFiles/actionman_game.dir/src/GameOverState.cpp.o: CMakeFiles/actionman_game.dir/flags.make
+CMakeFiles/actionman_game.dir/src/GameOverState.cpp.o: /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/GameOverState.cpp
+CMakeFiles/actionman_game.dir/src/GameOverState.cpp.o: CMakeFiles/actionman_game.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/actionman_game.dir/src/GameOverState.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/actionman_game.dir/src/GameOverState.cpp.o -MF CMakeFiles/actionman_game.dir/src/GameOverState.cpp.o.d -o CMakeFiles/actionman_game.dir/src/GameOverState.cpp.o -c /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/GameOverState.cpp
+
+CMakeFiles/actionman_game.dir/src/GameOverState.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/actionman_game.dir/src/GameOverState.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/GameOverState.cpp > CMakeFiles/actionman_game.dir/src/GameOverState.cpp.i
+
+CMakeFiles/actionman_game.dir/src/GameOverState.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/actionman_game.dir/src/GameOverState.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/GameOverState.cpp -o CMakeFiles/actionman_game.dir/src/GameOverState.cpp.s
+
+CMakeFiles/actionman_game.dir/src/GameClearState.cpp.o: CMakeFiles/actionman_game.dir/flags.make
+CMakeFiles/actionman_game.dir/src/GameClearState.cpp.o: /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/GameClearState.cpp
+CMakeFiles/actionman_game.dir/src/GameClearState.cpp.o: CMakeFiles/actionman_game.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/actionman_game.dir/src/GameClearState.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/actionman_game.dir/src/GameClearState.cpp.o -MF CMakeFiles/actionman_game.dir/src/GameClearState.cpp.o.d -o CMakeFiles/actionman_game.dir/src/GameClearState.cpp.o -c /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/GameClearState.cpp
+
+CMakeFiles/actionman_game.dir/src/GameClearState.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/actionman_game.dir/src/GameClearState.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/GameClearState.cpp > CMakeFiles/actionman_game.dir/src/GameClearState.cpp.i
+
+CMakeFiles/actionman_game.dir/src/GameClearState.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/actionman_game.dir/src/GameClearState.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/src/GameClearState.cpp -o CMakeFiles/actionman_game.dir/src/GameClearState.cpp.s
+
 # Object files for target actionman_game
 actionman_game_OBJECTS = \
 "CMakeFiles/actionman_game.dir/src/main.cpp.o" \
@@ -253,7 +323,12 @@ actionman_game_OBJECTS = \
 "CMakeFiles/actionman_game.dir/src/AirState.cpp.o" \
 "CMakeFiles/actionman_game.dir/src/Camera.cpp.o" \
 "CMakeFiles/actionman_game.dir/src/Map.cpp.o" \
-"CMakeFiles/actionman_game.dir/src/CollisionManager.cpp.o"
+"CMakeFiles/actionman_game.dir/src/CollisionManager.cpp.o" \
+"CMakeFiles/actionman_game.dir/src/UIManager.cpp.o" \
+"CMakeFiles/actionman_game.dir/src/PlayState.cpp.o" \
+"CMakeFiles/actionman_game.dir/src/GameStateManager.cpp.o" \
+"CMakeFiles/actionman_game.dir/src/GameOverState.cpp.o" \
+"CMakeFiles/actionman_game.dir/src/GameClearState.cpp.o"
 
 # External object files for target actionman_game
 actionman_game_EXTERNAL_OBJECTS =
@@ -270,11 +345,16 @@ actionman_game: CMakeFiles/actionman_game.dir/src/AirState.cpp.o
 actionman_game: CMakeFiles/actionman_game.dir/src/Camera.cpp.o
 actionman_game: CMakeFiles/actionman_game.dir/src/Map.cpp.o
 actionman_game: CMakeFiles/actionman_game.dir/src/CollisionManager.cpp.o
+actionman_game: CMakeFiles/actionman_game.dir/src/UIManager.cpp.o
+actionman_game: CMakeFiles/actionman_game.dir/src/PlayState.cpp.o
+actionman_game: CMakeFiles/actionman_game.dir/src/GameStateManager.cpp.o
+actionman_game: CMakeFiles/actionman_game.dir/src/GameOverState.cpp.o
+actionman_game: CMakeFiles/actionman_game.dir/src/GameClearState.cpp.o
 actionman_game: CMakeFiles/actionman_game.dir/build.make
 actionman_game: /opt/homebrew/Cellar/sdl2/2.32.10/lib/libSDL2.dylib
 actionman_game: /opt/homebrew/lib/libSDL2_ttf.dylib
 actionman_game: CMakeFiles/actionman_game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable actionman_game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable actionman_game"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/actionman_game.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

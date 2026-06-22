@@ -85,12 +85,12 @@ clean: CMakeFiles/actionman_game.dir/clean
 CMakeFiles/actionman_game.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target actionman_game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 "Built target actionman_game"
 .PHONY : CMakeFiles/actionman_game.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/actionman_game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles 18
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/actionman_game.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles 0
 .PHONY : CMakeFiles/actionman_game.dir/rule
@@ -102,7 +102,7 @@ actionman_game: CMakeFiles/actionman_game.dir/rule
 # codegen rule for target.
 CMakeFiles/actionman_game.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Finished codegen for target actionman_game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 "Finished codegen for target actionman_game"
 .PHONY : CMakeFiles/actionman_game.dir/codegen
 
 # clean rule for target.
