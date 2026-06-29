@@ -23,5 +23,22 @@ csvファイルで作成した表をカンマごとに分割してセルに入�
 
 https://github.com/user-attachments/assets/c9283cf4-62cf-44f8-8616-d232e06518a4
 
+6/28日更新
+UnityでのC#を使ったゲーム開発と並行して開発しました。<br>
+コードのリファクタリングと敵を追加しました。<br>
+CSVファイルから取得したデータをmapクラスで読み込む際の設定を<br>
+・1:壁（当たるとめり込み除去の処理と速度0に）<br>
+・2:ゴール（当たるとゲームステートをGameClearに変更）<br>
+・3:敵（当たるとゲームステートをGameOverに変更）<br>
+となるように設定した。<br>
+
+
+https://github.com/user-attachments/assets/84977faf-bdad-40f9-9c43-571962dcc426
+
+
+
+
+
+
 
 
