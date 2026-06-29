@@ -52,8 +52,6 @@ void Player::Update(float dt, const std::vector<SDL_Rect>& colliders) {
     // 摩擦による減速
     Friction(dt);
 
-    
-    
     // 速度の制限
     if (velocityX > targetMaxSpeed) velocityX = targetMaxSpeed;
     if (velocityX < -targetMaxSpeed) velocityX = -targetMaxSpeed;

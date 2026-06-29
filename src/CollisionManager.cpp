@@ -77,3 +77,12 @@ bool CollisionManager::CheckPlayerVsGoal(const SDL_Rect& playerRect, const std::
     }
     return false; // 全部のゴールをチェックして、どれともぶつかっていなければ false
 }
+
+bool CollisionManager::CheckPlayerVsEnemy(const SDL_Rect& playerRect, const std::vector<SDL_Rect>& goalColliders) {
+    for (const auto& goal : goalColliders) {
+        if (Physics::CheckCollision(playerRect, goal)) {
+            return true; // 敵にぶつかっていたら true
+        }
+    }
+    return false; // 全部の敵をチェックして、どれともぶつかっていなければ false
+}

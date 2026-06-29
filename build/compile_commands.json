@@ -1,0 +1,104 @@
+[
+{
+  "directory": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin25-g++-15  -I/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/include -I/opt/homebrew/Cellar/sdl2/2.32.10/include -I/opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2 -g -std=gnu++17 -arch arm64 -o CMakeFiles/actionman_game.dir/src/main.cpp.o -c /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/main.cpp",
+  "file": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/main.cpp",
+  "output": "CMakeFiles/actionman_game.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin25-g++-15  -I/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/include -I/opt/homebrew/Cellar/sdl2/2.32.10/include -I/opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2 -g -std=gnu++17 -arch arm64 -o CMakeFiles/actionman_game.dir/src/InputManager.cpp.o -c /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/InputManager.cpp",
+  "file": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/InputManager.cpp",
+  "output": "CMakeFiles/actionman_game.dir/src/InputManager.cpp.o"
+},
+{
+  "directory": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin25-g++-15  -I/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/include -I/opt/homebrew/Cellar/sdl2/2.32.10/include -I/opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2 -g -std=gnu++17 -arch arm64 -o CMakeFiles/actionman_game.dir/src/Game.cpp.o -c /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/Game.cpp",
+  "file": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/Game.cpp",
+  "output": "CMakeFiles/actionman_game.dir/src/Game.cpp.o"
+},
+{
+  "directory": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin25-g++-15  -I/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/include -I/opt/homebrew/Cellar/sdl2/2.32.10/include -I/opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2 -g -std=gnu++17 -arch arm64 -o CMakeFiles/actionman_game.dir/src/Player.cpp.o -c /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/Player.cpp",
+  "file": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/Player.cpp",
+  "output": "CMakeFiles/actionman_game.dir/src/Player.cpp.o"
+},
+{
+  "directory": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin25-g++-15  -I/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/include -I/opt/homebrew/Cellar/sdl2/2.32.10/include -I/opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2 -g -std=gnu++17 -arch arm64 -o CMakeFiles/actionman_game.dir/src/PlayerState/IdleState.cpp.o -c /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/PlayerState/IdleState.cpp",
+  "file": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/PlayerState/IdleState.cpp",
+  "output": "CMakeFiles/actionman_game.dir/src/PlayerState/IdleState.cpp.o"
+},
+{
+  "directory": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin25-g++-15  -I/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/include -I/opt/homebrew/Cellar/sdl2/2.32.10/include -I/opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2 -g -std=gnu++17 -arch arm64 -o CMakeFiles/actionman_game.dir/src/PlayerState/WalkState.cpp.o -c /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/PlayerState/WalkState.cpp",
+  "file": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/PlayerState/WalkState.cpp",
+  "output": "CMakeFiles/actionman_game.dir/src/PlayerState/WalkState.cpp.o"
+},
+{
+  "directory": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin25-g++-15  -I/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/include -I/opt/homebrew/Cellar/sdl2/2.32.10/include -I/opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2 -g -std=gnu++17 -arch arm64 -o CMakeFiles/actionman_game.dir/src/PlayerState/JumpState.cpp.o -c /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/PlayerState/JumpState.cpp",
+  "file": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/PlayerState/JumpState.cpp",
+  "output": "CMakeFiles/actionman_game.dir/src/PlayerState/JumpState.cpp.o"
+},
+{
+  "directory": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin25-g++-15  -I/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/include -I/opt/homebrew/Cellar/sdl2/2.32.10/include -I/opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2 -g -std=gnu++17 -arch arm64 -o CMakeFiles/actionman_game.dir/src/PlayerState/DashState.cpp.o -c /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/PlayerState/DashState.cpp",
+  "file": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/PlayerState/DashState.cpp",
+  "output": "CMakeFiles/actionman_game.dir/src/PlayerState/DashState.cpp.o"
+},
+{
+  "directory": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin25-g++-15  -I/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/include -I/opt/homebrew/Cellar/sdl2/2.32.10/include -I/opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2 -g -std=gnu++17 -arch arm64 -o CMakeFiles/actionman_game.dir/src/PlayerState/AirState.cpp.o -c /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/PlayerState/AirState.cpp",
+  "file": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/PlayerState/AirState.cpp",
+  "output": "CMakeFiles/actionman_game.dir/src/PlayerState/AirState.cpp.o"
+},
+{
+  "directory": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin25-g++-15  -I/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/include -I/opt/homebrew/Cellar/sdl2/2.32.10/include -I/opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2 -g -std=gnu++17 -arch arm64 -o CMakeFiles/actionman_game.dir/src/Camera.cpp.o -c /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/Camera.cpp",
+  "file": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/Camera.cpp",
+  "output": "CMakeFiles/actionman_game.dir/src/Camera.cpp.o"
+},
+{
+  "directory": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin25-g++-15  -I/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/include -I/opt/homebrew/Cellar/sdl2/2.32.10/include -I/opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2 -g -std=gnu++17 -arch arm64 -o CMakeFiles/actionman_game.dir/src/Map.cpp.o -c /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/Map.cpp",
+  "file": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/Map.cpp",
+  "output": "CMakeFiles/actionman_game.dir/src/Map.cpp.o"
+},
+{
+  "directory": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin25-g++-15  -I/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/include -I/opt/homebrew/Cellar/sdl2/2.32.10/include -I/opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2 -g -std=gnu++17 -arch arm64 -o CMakeFiles/actionman_game.dir/src/CollisionManager.cpp.o -c /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/CollisionManager.cpp",
+  "file": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/CollisionManager.cpp",
+  "output": "CMakeFiles/actionman_game.dir/src/CollisionManager.cpp.o"
+},
+{
+  "directory": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin25-g++-15  -I/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/include -I/opt/homebrew/Cellar/sdl2/2.32.10/include -I/opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2 -g -std=gnu++17 -arch arm64 -o CMakeFiles/actionman_game.dir/src/UIManager.cpp.o -c /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/UIManager.cpp",
+  "file": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/UIManager.cpp",
+  "output": "CMakeFiles/actionman_game.dir/src/UIManager.cpp.o"
+},
+{
+  "directory": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin25-g++-15  -I/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/include -I/opt/homebrew/Cellar/sdl2/2.32.10/include -I/opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2 -g -std=gnu++17 -arch arm64 -o CMakeFiles/actionman_game.dir/src/GameState/PlayState.cpp.o -c /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/GameState/PlayState.cpp",
+  "file": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/GameState/PlayState.cpp",
+  "output": "CMakeFiles/actionman_game.dir/src/GameState/PlayState.cpp.o"
+},
+{
+  "directory": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin25-g++-15  -I/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/include -I/opt/homebrew/Cellar/sdl2/2.32.10/include -I/opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2 -g -std=gnu++17 -arch arm64 -o CMakeFiles/actionman_game.dir/src/GameState/GameStateManager.cpp.o -c /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/GameState/GameStateManager.cpp",
+  "file": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/GameState/GameStateManager.cpp",
+  "output": "CMakeFiles/actionman_game.dir/src/GameState/GameStateManager.cpp.o"
+},
+{
+  "directory": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin25-g++-15  -I/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/include -I/opt/homebrew/Cellar/sdl2/2.32.10/include -I/opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2 -g -std=gnu++17 -arch arm64 -o CMakeFiles/actionman_game.dir/src/GameState/GameOverState.cpp.o -c /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/GameState/GameOverState.cpp",
+  "file": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/GameState/GameOverState.cpp",
+  "output": "CMakeFiles/actionman_game.dir/src/GameState/GameOverState.cpp.o"
+},
+{
+  "directory": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin25-g++-15  -I/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/include -I/opt/homebrew/Cellar/sdl2/2.32.10/include -I/opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2 -g -std=gnu++17 -arch arm64 -o CMakeFiles/actionman_game.dir/src/GameState/GameClearState.cpp.o -c /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/GameState/GameClearState.cpp",
+  "file": "/Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/src/GameState/GameClearState.cpp",
+  "output": "CMakeFiles/actionman_game.dir/src/GameState/GameClearState.cpp.o"
+}
+]

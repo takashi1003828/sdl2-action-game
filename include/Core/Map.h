@@ -21,6 +21,7 @@ public:
     // ゴールの当たり判定を取得する
     const std::vector<SDL_Rect>& GetGoalColliders() const { return goalColliders; }
 
+    const std::vector<SDL_Rect>& GetEnemyColliders() const { return enemyColliders; }
 private:
     int tileSize;
     // マップデータ本体（縦×横の2次元配列）
@@ -29,4 +30,5 @@ private:
     std::vector<SDL_Rect> GetSurround(SDL_Rect playerRect);
     std::vector<SDL_Rect> wallColliders;
     std::vector<SDL_Rect>goalColliders;
+    std::vector<SDL_Rect>enemyColliders;
 };

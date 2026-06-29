@@ -57,10 +57,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game
+CMAKE_SOURCE_DIR = /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build
+CMAKE_BINARY_DIR = /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build/CMakeFiles /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/Samsung_T7/ゲーム/自作ゲーム/C++学習ゲーム作成/sdl2-action-game/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/Samsung_T7/game/Mygames/CppStudy/sdl2-action-game/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,30 +128,6 @@ actionman_game: cmake_check_build_system
 actionman_game/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/build
 .PHONY : actionman_game/fast
-
-src/AirState.o: src/AirState.cpp.o
-.PHONY : src/AirState.o
-
-# target to build an object file
-src/AirState.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/AirState.cpp.o
-.PHONY : src/AirState.cpp.o
-
-src/AirState.i: src/AirState.cpp.i
-.PHONY : src/AirState.i
-
-# target to preprocess a source file
-src/AirState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/AirState.cpp.i
-.PHONY : src/AirState.cpp.i
-
-src/AirState.s: src/AirState.cpp.s
-.PHONY : src/AirState.s
-
-# target to generate assembly for a file
-src/AirState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/AirState.cpp.s
-.PHONY : src/AirState.cpp.s
 
 src/Camera.o: src/Camera.cpp.o
 .PHONY : src/Camera.o
@@ -201,30 +177,6 @@ src/CollisionManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/CollisionManager.cpp.s
 .PHONY : src/CollisionManager.cpp.s
 
-src/DashState.o: src/DashState.cpp.o
-.PHONY : src/DashState.o
-
-# target to build an object file
-src/DashState.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/DashState.cpp.o
-.PHONY : src/DashState.cpp.o
-
-src/DashState.i: src/DashState.cpp.i
-.PHONY : src/DashState.i
-
-# target to preprocess a source file
-src/DashState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/DashState.cpp.i
-.PHONY : src/DashState.cpp.i
-
-src/DashState.s: src/DashState.cpp.s
-.PHONY : src/DashState.s
-
-# target to generate assembly for a file
-src/DashState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/DashState.cpp.s
-.PHONY : src/DashState.cpp.s
-
 src/Game.o: src/Game.cpp.o
 .PHONY : src/Game.o
 
@@ -249,101 +201,101 @@ src/Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
 
-src/GameClearState.o: src/GameClearState.cpp.o
-.PHONY : src/GameClearState.o
+src/GameState/GameClearState.o: src/GameState/GameClearState.cpp.o
+.PHONY : src/GameState/GameClearState.o
 
 # target to build an object file
-src/GameClearState.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameClearState.cpp.o
-.PHONY : src/GameClearState.cpp.o
+src/GameState/GameClearState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameState/GameClearState.cpp.o
+.PHONY : src/GameState/GameClearState.cpp.o
 
-src/GameClearState.i: src/GameClearState.cpp.i
-.PHONY : src/GameClearState.i
+src/GameState/GameClearState.i: src/GameState/GameClearState.cpp.i
+.PHONY : src/GameState/GameClearState.i
 
 # target to preprocess a source file
-src/GameClearState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameClearState.cpp.i
-.PHONY : src/GameClearState.cpp.i
+src/GameState/GameClearState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameState/GameClearState.cpp.i
+.PHONY : src/GameState/GameClearState.cpp.i
 
-src/GameClearState.s: src/GameClearState.cpp.s
-.PHONY : src/GameClearState.s
+src/GameState/GameClearState.s: src/GameState/GameClearState.cpp.s
+.PHONY : src/GameState/GameClearState.s
 
 # target to generate assembly for a file
-src/GameClearState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameClearState.cpp.s
-.PHONY : src/GameClearState.cpp.s
+src/GameState/GameClearState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameState/GameClearState.cpp.s
+.PHONY : src/GameState/GameClearState.cpp.s
 
-src/GameOverState.o: src/GameOverState.cpp.o
-.PHONY : src/GameOverState.o
+src/GameState/GameOverState.o: src/GameState/GameOverState.cpp.o
+.PHONY : src/GameState/GameOverState.o
 
 # target to build an object file
-src/GameOverState.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameOverState.cpp.o
-.PHONY : src/GameOverState.cpp.o
+src/GameState/GameOverState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameState/GameOverState.cpp.o
+.PHONY : src/GameState/GameOverState.cpp.o
 
-src/GameOverState.i: src/GameOverState.cpp.i
-.PHONY : src/GameOverState.i
+src/GameState/GameOverState.i: src/GameState/GameOverState.cpp.i
+.PHONY : src/GameState/GameOverState.i
 
 # target to preprocess a source file
-src/GameOverState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameOverState.cpp.i
-.PHONY : src/GameOverState.cpp.i
+src/GameState/GameOverState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameState/GameOverState.cpp.i
+.PHONY : src/GameState/GameOverState.cpp.i
 
-src/GameOverState.s: src/GameOverState.cpp.s
-.PHONY : src/GameOverState.s
+src/GameState/GameOverState.s: src/GameState/GameOverState.cpp.s
+.PHONY : src/GameState/GameOverState.s
 
 # target to generate assembly for a file
-src/GameOverState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameOverState.cpp.s
-.PHONY : src/GameOverState.cpp.s
+src/GameState/GameOverState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameState/GameOverState.cpp.s
+.PHONY : src/GameState/GameOverState.cpp.s
 
-src/GameStateManager.o: src/GameStateManager.cpp.o
-.PHONY : src/GameStateManager.o
+src/GameState/GameStateManager.o: src/GameState/GameStateManager.cpp.o
+.PHONY : src/GameState/GameStateManager.o
 
 # target to build an object file
-src/GameStateManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameStateManager.cpp.o
-.PHONY : src/GameStateManager.cpp.o
+src/GameState/GameStateManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameState/GameStateManager.cpp.o
+.PHONY : src/GameState/GameStateManager.cpp.o
 
-src/GameStateManager.i: src/GameStateManager.cpp.i
-.PHONY : src/GameStateManager.i
+src/GameState/GameStateManager.i: src/GameState/GameStateManager.cpp.i
+.PHONY : src/GameState/GameStateManager.i
 
 # target to preprocess a source file
-src/GameStateManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameStateManager.cpp.i
-.PHONY : src/GameStateManager.cpp.i
+src/GameState/GameStateManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameState/GameStateManager.cpp.i
+.PHONY : src/GameState/GameStateManager.cpp.i
 
-src/GameStateManager.s: src/GameStateManager.cpp.s
-.PHONY : src/GameStateManager.s
+src/GameState/GameStateManager.s: src/GameState/GameStateManager.cpp.s
+.PHONY : src/GameState/GameStateManager.s
 
 # target to generate assembly for a file
-src/GameStateManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameStateManager.cpp.s
-.PHONY : src/GameStateManager.cpp.s
+src/GameState/GameStateManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameState/GameStateManager.cpp.s
+.PHONY : src/GameState/GameStateManager.cpp.s
 
-src/IdleState.o: src/IdleState.cpp.o
-.PHONY : src/IdleState.o
+src/GameState/PlayState.o: src/GameState/PlayState.cpp.o
+.PHONY : src/GameState/PlayState.o
 
 # target to build an object file
-src/IdleState.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/IdleState.cpp.o
-.PHONY : src/IdleState.cpp.o
+src/GameState/PlayState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameState/PlayState.cpp.o
+.PHONY : src/GameState/PlayState.cpp.o
 
-src/IdleState.i: src/IdleState.cpp.i
-.PHONY : src/IdleState.i
+src/GameState/PlayState.i: src/GameState/PlayState.cpp.i
+.PHONY : src/GameState/PlayState.i
 
 # target to preprocess a source file
-src/IdleState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/IdleState.cpp.i
-.PHONY : src/IdleState.cpp.i
+src/GameState/PlayState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameState/PlayState.cpp.i
+.PHONY : src/GameState/PlayState.cpp.i
 
-src/IdleState.s: src/IdleState.cpp.s
-.PHONY : src/IdleState.s
+src/GameState/PlayState.s: src/GameState/PlayState.cpp.s
+.PHONY : src/GameState/PlayState.s
 
 # target to generate assembly for a file
-src/IdleState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/IdleState.cpp.s
-.PHONY : src/IdleState.cpp.s
+src/GameState/PlayState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/GameState/PlayState.cpp.s
+.PHONY : src/GameState/PlayState.cpp.s
 
 src/InputManager.o: src/InputManager.cpp.o
 .PHONY : src/InputManager.o
@@ -369,30 +321,6 @@ src/InputManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/InputManager.cpp.s
 .PHONY : src/InputManager.cpp.s
 
-src/JumpState.o: src/JumpState.cpp.o
-.PHONY : src/JumpState.o
-
-# target to build an object file
-src/JumpState.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/JumpState.cpp.o
-.PHONY : src/JumpState.cpp.o
-
-src/JumpState.i: src/JumpState.cpp.i
-.PHONY : src/JumpState.i
-
-# target to preprocess a source file
-src/JumpState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/JumpState.cpp.i
-.PHONY : src/JumpState.cpp.i
-
-src/JumpState.s: src/JumpState.cpp.s
-.PHONY : src/JumpState.s
-
-# target to generate assembly for a file
-src/JumpState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/JumpState.cpp.s
-.PHONY : src/JumpState.cpp.s
-
 src/Map.o: src/Map.cpp.o
 .PHONY : src/Map.o
 
@@ -416,30 +344,6 @@ src/Map.s: src/Map.cpp.s
 src/Map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/Map.cpp.s
 .PHONY : src/Map.cpp.s
-
-src/PlayState.o: src/PlayState.cpp.o
-.PHONY : src/PlayState.o
-
-# target to build an object file
-src/PlayState.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/PlayState.cpp.o
-.PHONY : src/PlayState.cpp.o
-
-src/PlayState.i: src/PlayState.cpp.i
-.PHONY : src/PlayState.i
-
-# target to preprocess a source file
-src/PlayState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/PlayState.cpp.i
-.PHONY : src/PlayState.cpp.i
-
-src/PlayState.s: src/PlayState.cpp.s
-.PHONY : src/PlayState.s
-
-# target to generate assembly for a file
-src/PlayState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/PlayState.cpp.s
-.PHONY : src/PlayState.cpp.s
 
 src/Player.o: src/Player.cpp.o
 .PHONY : src/Player.o
@@ -465,6 +369,126 @@ src/Player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/Player.cpp.s
 .PHONY : src/Player.cpp.s
 
+src/PlayerState/AirState.o: src/PlayerState/AirState.cpp.o
+.PHONY : src/PlayerState/AirState.o
+
+# target to build an object file
+src/PlayerState/AirState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/PlayerState/AirState.cpp.o
+.PHONY : src/PlayerState/AirState.cpp.o
+
+src/PlayerState/AirState.i: src/PlayerState/AirState.cpp.i
+.PHONY : src/PlayerState/AirState.i
+
+# target to preprocess a source file
+src/PlayerState/AirState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/PlayerState/AirState.cpp.i
+.PHONY : src/PlayerState/AirState.cpp.i
+
+src/PlayerState/AirState.s: src/PlayerState/AirState.cpp.s
+.PHONY : src/PlayerState/AirState.s
+
+# target to generate assembly for a file
+src/PlayerState/AirState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/PlayerState/AirState.cpp.s
+.PHONY : src/PlayerState/AirState.cpp.s
+
+src/PlayerState/DashState.o: src/PlayerState/DashState.cpp.o
+.PHONY : src/PlayerState/DashState.o
+
+# target to build an object file
+src/PlayerState/DashState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/PlayerState/DashState.cpp.o
+.PHONY : src/PlayerState/DashState.cpp.o
+
+src/PlayerState/DashState.i: src/PlayerState/DashState.cpp.i
+.PHONY : src/PlayerState/DashState.i
+
+# target to preprocess a source file
+src/PlayerState/DashState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/PlayerState/DashState.cpp.i
+.PHONY : src/PlayerState/DashState.cpp.i
+
+src/PlayerState/DashState.s: src/PlayerState/DashState.cpp.s
+.PHONY : src/PlayerState/DashState.s
+
+# target to generate assembly for a file
+src/PlayerState/DashState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/PlayerState/DashState.cpp.s
+.PHONY : src/PlayerState/DashState.cpp.s
+
+src/PlayerState/IdleState.o: src/PlayerState/IdleState.cpp.o
+.PHONY : src/PlayerState/IdleState.o
+
+# target to build an object file
+src/PlayerState/IdleState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/PlayerState/IdleState.cpp.o
+.PHONY : src/PlayerState/IdleState.cpp.o
+
+src/PlayerState/IdleState.i: src/PlayerState/IdleState.cpp.i
+.PHONY : src/PlayerState/IdleState.i
+
+# target to preprocess a source file
+src/PlayerState/IdleState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/PlayerState/IdleState.cpp.i
+.PHONY : src/PlayerState/IdleState.cpp.i
+
+src/PlayerState/IdleState.s: src/PlayerState/IdleState.cpp.s
+.PHONY : src/PlayerState/IdleState.s
+
+# target to generate assembly for a file
+src/PlayerState/IdleState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/PlayerState/IdleState.cpp.s
+.PHONY : src/PlayerState/IdleState.cpp.s
+
+src/PlayerState/JumpState.o: src/PlayerState/JumpState.cpp.o
+.PHONY : src/PlayerState/JumpState.o
+
+# target to build an object file
+src/PlayerState/JumpState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/PlayerState/JumpState.cpp.o
+.PHONY : src/PlayerState/JumpState.cpp.o
+
+src/PlayerState/JumpState.i: src/PlayerState/JumpState.cpp.i
+.PHONY : src/PlayerState/JumpState.i
+
+# target to preprocess a source file
+src/PlayerState/JumpState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/PlayerState/JumpState.cpp.i
+.PHONY : src/PlayerState/JumpState.cpp.i
+
+src/PlayerState/JumpState.s: src/PlayerState/JumpState.cpp.s
+.PHONY : src/PlayerState/JumpState.s
+
+# target to generate assembly for a file
+src/PlayerState/JumpState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/PlayerState/JumpState.cpp.s
+.PHONY : src/PlayerState/JumpState.cpp.s
+
+src/PlayerState/WalkState.o: src/PlayerState/WalkState.cpp.o
+.PHONY : src/PlayerState/WalkState.o
+
+# target to build an object file
+src/PlayerState/WalkState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/PlayerState/WalkState.cpp.o
+.PHONY : src/PlayerState/WalkState.cpp.o
+
+src/PlayerState/WalkState.i: src/PlayerState/WalkState.cpp.i
+.PHONY : src/PlayerState/WalkState.i
+
+# target to preprocess a source file
+src/PlayerState/WalkState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/PlayerState/WalkState.cpp.i
+.PHONY : src/PlayerState/WalkState.cpp.i
+
+src/PlayerState/WalkState.s: src/PlayerState/WalkState.cpp.s
+.PHONY : src/PlayerState/WalkState.s
+
+# target to generate assembly for a file
+src/PlayerState/WalkState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/PlayerState/WalkState.cpp.s
+.PHONY : src/PlayerState/WalkState.cpp.s
+
 src/UIManager.o: src/UIManager.cpp.o
 .PHONY : src/UIManager.o
 
@@ -488,30 +512,6 @@ src/UIManager.s: src/UIManager.cpp.s
 src/UIManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/UIManager.cpp.s
 .PHONY : src/UIManager.cpp.s
-
-src/WalkState.o: src/WalkState.cpp.o
-.PHONY : src/WalkState.o
-
-# target to build an object file
-src/WalkState.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/WalkState.cpp.o
-.PHONY : src/WalkState.cpp.o
-
-src/WalkState.i: src/WalkState.cpp.i
-.PHONY : src/WalkState.i
-
-# target to preprocess a source file
-src/WalkState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/WalkState.cpp.i
-.PHONY : src/WalkState.cpp.i
-
-src/WalkState.s: src/WalkState.cpp.s
-.PHONY : src/WalkState.s
-
-# target to generate assembly for a file
-src/WalkState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionman_game.dir/build.make CMakeFiles/actionman_game.dir/src/WalkState.cpp.s
-.PHONY : src/WalkState.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -546,54 +546,54 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... actionman_game"
-	@echo "... src/AirState.o"
-	@echo "... src/AirState.i"
-	@echo "... src/AirState.s"
 	@echo "... src/Camera.o"
 	@echo "... src/Camera.i"
 	@echo "... src/Camera.s"
 	@echo "... src/CollisionManager.o"
 	@echo "... src/CollisionManager.i"
 	@echo "... src/CollisionManager.s"
-	@echo "... src/DashState.o"
-	@echo "... src/DashState.i"
-	@echo "... src/DashState.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
-	@echo "... src/GameClearState.o"
-	@echo "... src/GameClearState.i"
-	@echo "... src/GameClearState.s"
-	@echo "... src/GameOverState.o"
-	@echo "... src/GameOverState.i"
-	@echo "... src/GameOverState.s"
-	@echo "... src/GameStateManager.o"
-	@echo "... src/GameStateManager.i"
-	@echo "... src/GameStateManager.s"
-	@echo "... src/IdleState.o"
-	@echo "... src/IdleState.i"
-	@echo "... src/IdleState.s"
+	@echo "... src/GameState/GameClearState.o"
+	@echo "... src/GameState/GameClearState.i"
+	@echo "... src/GameState/GameClearState.s"
+	@echo "... src/GameState/GameOverState.o"
+	@echo "... src/GameState/GameOverState.i"
+	@echo "... src/GameState/GameOverState.s"
+	@echo "... src/GameState/GameStateManager.o"
+	@echo "... src/GameState/GameStateManager.i"
+	@echo "... src/GameState/GameStateManager.s"
+	@echo "... src/GameState/PlayState.o"
+	@echo "... src/GameState/PlayState.i"
+	@echo "... src/GameState/PlayState.s"
 	@echo "... src/InputManager.o"
 	@echo "... src/InputManager.i"
 	@echo "... src/InputManager.s"
-	@echo "... src/JumpState.o"
-	@echo "... src/JumpState.i"
-	@echo "... src/JumpState.s"
 	@echo "... src/Map.o"
 	@echo "... src/Map.i"
 	@echo "... src/Map.s"
-	@echo "... src/PlayState.o"
-	@echo "... src/PlayState.i"
-	@echo "... src/PlayState.s"
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"
+	@echo "... src/PlayerState/AirState.o"
+	@echo "... src/PlayerState/AirState.i"
+	@echo "... src/PlayerState/AirState.s"
+	@echo "... src/PlayerState/DashState.o"
+	@echo "... src/PlayerState/DashState.i"
+	@echo "... src/PlayerState/DashState.s"
+	@echo "... src/PlayerState/IdleState.o"
+	@echo "... src/PlayerState/IdleState.i"
+	@echo "... src/PlayerState/IdleState.s"
+	@echo "... src/PlayerState/JumpState.o"
+	@echo "... src/PlayerState/JumpState.i"
+	@echo "... src/PlayerState/JumpState.s"
+	@echo "... src/PlayerState/WalkState.o"
+	@echo "... src/PlayerState/WalkState.i"
+	@echo "... src/PlayerState/WalkState.s"
 	@echo "... src/UIManager.o"
 	@echo "... src/UIManager.i"
 	@echo "... src/UIManager.s"
-	@echo "... src/WalkState.o"
-	@echo "... src/WalkState.i"
-	@echo "... src/WalkState.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

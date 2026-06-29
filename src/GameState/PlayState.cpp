@@ -38,6 +38,12 @@ void PlayState::Update(float dt, GameStateManager* gsm) {
         gsm->ChangeState(new GameOverState());
         return; // ★超重要：切り替えたら即座にこの関数を抜ける！
     }
+
+    if(CollisionManager::CheckPlayerVsEnemy(player.GetRect(),myMap.GetEnemyColliders())){
+        std::cout << "もう終わりだよ...敵に当たった..." << std::endl;
+        gsm->ChangeState(new GameOverState());
+        return; // ★超重要：切り替えたら即座にこの関数を抜ける！
+    }
     
     // ゲームクリアの判定
     if(CollisionManager::CheckPlayerVsGoal(player.GetRect(), myMap.GetGoalColliders())){

@@ -110,44 +110,11 @@ void Game::UpdateGame() {
     if (frameTime < FRAME_DELAY) {
         SDL_Delay(FRAME_DELAY - frameTime);
     }
-    
-    // }else{
-    //     auto& input = InputManager::GetInstance();
-    //     if (input.IsKeyDown(SDL_SCANCODE_R)){
-    //         // ゲームの状態をリセット
-    //         currentState = GameState::PLAYING;
-    //         // プレイヤーの位置や状態を初期化する処理を呼び出す（例: player.Reset()）
-    //         player = Player(); // プレイヤーオブジェクトを新しく作り直すことでリセット
-    //         std::cout << "ゲームをリセットしました！" << std::endl;
-    //     }
-    // }
-    
 }
 
 //　描画処理
 void Game::GenerateOutput() {
-    // // 状態に合わせて背景色（空の色）を変える
-    // if (currentState == GameState::PLAYING) {
-    //     SDL_SetRenderDrawColor(renderer, 135, 206, 235, 255); // プレイ中：水色
-    // } 
-    // else if (currentState == GameState::GAME_OVER) {
-    //     SDL_SetRenderDrawColor(renderer, 200, 0, 0, 255);     // 死亡：血のような赤色
-    // } 
-    // else if (currentState == GameState::GAME_CLEAR) {
-    //     SDL_SetRenderDrawColor(renderer, 255, 215, 0, 255);   // クリア：黄金色
-    // }
-
     
-    // bool isBlinking = (SDL_GetTicks() / 500) % 2 == 0;
-
-    // if (isBlinking) {
-    //     if (currentState == GameState::GAME_OVER) {
-    //         uiManager.DrawGameOver(renderer);
-    //     }
-    //     else if (currentState == GameState::GAME_CLEAR) {
-    //         uiManager.DrawGameClear(renderer);
-    //     }
-    // }
     gamestateManager.Render(renderer, &uiManager);
     // 描画の更新
     SDL_RenderPresent(renderer);

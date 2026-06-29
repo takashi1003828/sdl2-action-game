@@ -44,6 +44,7 @@ bool Map::LoadFromCSV(const std::string& filePath) {
 
     wallColliders.clear();
     goalColliders.clear();
+    enemyColliders.clear();
     
     for (int row = 0; row < mapData.size(); ++row) {
         for (int col = 0; col < mapData[row].size(); ++col) {
@@ -51,10 +52,14 @@ bool Map::LoadFromCSV(const std::string& filePath) {
                 // 壁の短形を作ってリストに保存
                 SDL_Rect wall = { col * tileSize, row * tileSize, tileSize, tileSize };
                 wallColliders.push_back(wall);
-                }
+            }
             else if (mapData[row][col] == 2) {
                 SDL_Rect goal = { col * tileSize, row * tileSize, tileSize, tileSize };
                 goalColliders.push_back(goal);
+            }
+            else if (mapData[row][col] == 3){
+                SDL_Rect enemy = { col * tileSize, row * tileSize, tileSize, tileSize };
+                enemyColliders.push_back(enemy);
             }
         }
     }
@@ -80,6 +85,10 @@ void Map::Render(SDL_Renderer* renderer, int camX, int camY) {
             else if (mapData[row][col] == 2) { // 2ならゴール
                
                 SDL_SetRenderDrawColor(renderer, 255, 215, 0, 255); // ゴールは黄金色
+                SDL_RenderFillRect(renderer, &blockRect);
+            }
+            else if(mapData[row][col] == 3){
+                SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255); // 敵は赤色
                 SDL_RenderFillRect(renderer, &blockRect);
             }
         }

@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.10)
 project(actionman_game)
 
-#C++ 17を使用
+# 【追加】VS CodeのIntelliSense連携用に compile_commands.json を生成する
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# C++ 17を使用
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-# ヘッダーファイルの検索パス
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # homebrewのパスを検索対象に追加
 list(APPEND CMAKE_PREFIX_PATH "/opt/homebrew")
@@ -21,37 +21,44 @@ find_library(SDL2_TTF_LIBRARY NAMES SDL2_ttf
     HINTS /opt/homebrew/lib /usr/local/lib
 )
 
-#コンパイルするソースファイルを指定
+# コンパイルするソースファイルを指定
 set(SOURCES
     src/main.cpp
     src/InputManager.cpp
     src/Game.cpp
     src/Player.cpp
-    src/IdleState.cpp
-    src/WalkState.cpp
-    src/JumpState.cpp
-    src/DashState.cpp
-    src/AirState.cpp
+    src/PlayerState/IdleState.cpp
+    src/PlayerState/WalkState.cpp
+    src/PlayerState/JumpState.cpp
+    src/PlayerState/DashState.cpp
+    src/PlayerState/AirState.cpp
     src/Camera.cpp
     src/Map.cpp
     src/CollisionManager.cpp
     src/UIManager.cpp
-    src/PlayState.cpp
-    src/GameStateManager.cpp
-    src/GameOverState.cpp
-    src/GameClearState.cpp
+    src/GameState/PlayState.cpp
+    src/GameState/GameStateManager.cpp
+    src/GameState/GameOverState.cpp
+    src/GameState/GameClearState.cpp
 )
 
-# 実行ファイルを作成
+# ---------------------------------------------------
+# ターゲット（実行ファイル）の作成と設定
+# ※必ず add_executable を先に書く必要があります
+# ---------------------------------------------------
+
+# ① 実行ファイルを作成
 add_executable(actionman_game ${SOURCES})
 
-# ヘッダーファイルの場所を指定
-target_include_directories(actionman_game PRIVATE ${SDL2_INCLUDE_DIRS})
+# ② インクルードパス（ヘッダーファイルの場所）をまとめて指定
+target_include_directories(actionman_game PRIVATE 
+    ${CMAKE_CURRENT_SOURCE_DIR}/include  # 自身のプロジェクトのinclude
+    ${SDL2_INCLUDE_DIRS}                 # SDL2本体
+    ${SDL2_TTF_INCLUDE_DIR}              # SDL2_ttf
+)
 
-# ライブラリ本体の場所とライブラリ名を指定
-target_link_libraries(actionman_game PRIVATE ${SDL2_LIBRARIES})
-
-target_include_directories(actionman_game PRIVATE ${SDL2_TTF_INCLUDE_DIR})
-target_link_libraries(actionman_game PRIVATE ${SDL2_TTF_LIBRARY})
-
-
+# ③ リンクするライブラリをまとめて指定
+target_link_libraries(actionman_game PRIVATE 
+    ${SDL2_LIBRARIES}                    # SDL2本体
+    ${SDL2_TTF_LIBRARY}                  # SDL2_ttf
+)
